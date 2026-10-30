@@ -1,0 +1,6 @@
+
+> petala-catalogo@1.0.0 start
+> node server.js
+
+Pétala disponível em http://localhost:3000
+Acesso pelo celular: http://192.168.0.11:3000/painel.html

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assinatura floral | Pétala</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../floral.css">
+</head>
+<body>
+    <header class="floral-header">
+        <a class="floral-brand" href="../index.html"><span class="brand-mark">P</span><span>Pétala <small>floricultura</small></span></a>
+        <a class="back-link" href="../index.html">Voltar ao catálogo</a>
+    </header>
+    <main>
+        <section class="floral-hero">
+            <p id="signature-kicker" class="kicker">A assinatura Pétala</p>
+            <h1 id="signature-title">Delicadeza em cada detalhe.</h1>
+            <p id="signature-text" class="hero-copy">Do primeiro laço à última pétala, criamos presentes com intenção, beleza e o cuidado de quem conhece a força de um gesto.</p>
+        </section>
+        <section id="assinaturas" class="collections" aria-labelledby="how-it-works-title">
+
+            <div class="section-intro">
+                <h2 id="how-it-works-title">Como funciona?</h2>
+                <ol class="how-it-works-list">
+                    <li><strong>Liberdade de Frequência:</strong> Você escolhe a periodicidade ideal para o seu ritmo (semanal, quinzenal ou mensal).</li>
+                    <li><strong>Curadoria Autoral e Exclusiva:</strong> Cada entrega traz uma composição inédita e autoral com flores frescas da estação. Uma surpresa diferente a cada mês!</li>
+                    <li><strong>Retirada ou Entrega:</strong> Escolha entre retirar gratuitamente em nossa loja ou receber no conforto do seu endereço (taxa de entrega calculada de acordo com a localização).</li>
+                    <li><strong>Valor Final:</strong> Após selecionar o plano, a frequência e a modalidade de entrega, finalizamos o valor total da sua assinatura.</li>
+                </ol>
+
+                <p class="kicker">Coleção de assinaturas</p>
+                <h2 id="signature-options-title">Escolha sua assinatura</h2>
+            </div>
+
+            <div id="signature-list" class="product-grid"><p class="loading">Carregando assinaturas...</p></div>
+        </section>
+    </main>
+    <footer class="floral-footer"><span>Pétala Floricultura</span><span>© 2026 · Santana de Parnaíba</span></footer>
+    <script>
+        const defaults = { kicker: 'A assinatura Pétala', title: 'Delicadeza em cada detalhe.', text: 'Do primeiro laço à última pétala, criamos presentes com intenção, beleza e o cuidado de quem conhece a força de um gesto.', name: 'Pétala', caption: 'flores para dizer o que importa' };
+        const saved = localStorage.getItem('petala_catalogo');
+        const source = saved ? Promise.resolve(JSON.parse(saved)) : fetch('../produtos.json').then(response => response.json());
+        const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[character]));
+        const imagePath = value => { const clean = String(value || '').replace(/^(\.\.\/)+/, '').replace(/^Pétala Floricultura_files\//, ''); return clean.includes('/') ? `../${clean}` : `../floricultura files/${clean}`; };
+        const formatPrice = value => typeof value === 'number' ? value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) : 'Sob consulta';
+        function renderSignatures(catalog) {
+            const signatures = Array.isArray(catalog.assinaturas) ? catalog.assinaturas : [];
+            const target = document.getElementById('signature-list');
+            target.innerHTML = signatures.length ? signatures.map(signature => {
+                const image = signature.imagens?.[0] ? `<img src="${imagePath(signature.imagens[0])}" alt="${escapeHtml(signature.titulo)}" loading="lazy" onerror="this.closest('.product-image').classList.add('empty')">` : '';
+                const message = encodeURIComponent(`Olá, gostaria de conhecer a assinatura: ${signature.titulo || 'Assinatura floral'}`);
+                return `<article class="floral-card"><div class="product-image">${image}<span class="image-fallback">Pétala</span></div><div class="card-content"><h4>${escapeHtml(signature.titulo || 'Assinatura floral')}</h4><p>${escapeHtml(signature.descricao || '')}</p><div class="card-bottom"><strong>${formatPrice(signature.preco)}</strong><a href="https://wa.me/5511955506889?text=${message}" target="_blank" rel="noreferrer">Conhecer</a></div></div></article>`;
+            }).join('') : '<p class="loading">Em breve, novas assinaturas estarão disponíveis.</p>';
+        }
+        source.then(catalog => {
+            const signature = { ...defaults, ...(catalog.assinaturaFloral || {}) };
+            document.getElementById('signature-kicker').textContent = signature.kicker;
+            document.getElementById('signature-title').textContent = signature.title;
+            document.getElementById('signature-text').textContent = signature.text;
+            renderSignatures(catalog);
+        });
+    </script>
+</body>
+</html>

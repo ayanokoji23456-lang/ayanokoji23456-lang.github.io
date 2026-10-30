@@ -1,0 +1,1064 @@
+{
+  "buques": {
+    "noivas": [
+      {
+        "titulo": "Buquê de Callas",
+        "descricao": "Buquê de calas ou copo de leite e finalizado com fita de cetim.",
+        "preco": 90,
+        "imagens": [
+          "cala.webp",
+          "cala2.webp",
+          "cala3.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de Rosas e Astromélias",
+        "descricao": "Buquê com 18 rosas, astromélias e finalizado com fita de cetim.",
+        "preco": 170,
+        "imagens": [
+          "fv.webp",
+          "fv2.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de Astromélia",
+        "descricao": "Buquê de astromélias, fantasia ou mosquitinho e finalizado com fita de cetim.",
+        "preco": 45,
+        "imagens": [
+          "astro.webp",
+          "astro2.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de Lírio Dobrado",
+        "descricao": "Buquê de lírio dobrado e finalizado com fita de cetim.",
+        "preco": 140,
+        "imagens": [
+          "liro.webp",
+          "liro2.webp",
+          "liro3.webp"
+        ]
+      },
+      {
+        "titulo": "Mini Buquê de Astromélias",
+        "descricao": "Mini buquê de mão. Buquê de astromélias, mosquitinho e finalizado com fita de cetim. (Opção para casamento no civil).",
+        "preco": 35,
+        "imagens": [
+          "minic.webp",
+          "minic2.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de Rosas e Flores do Campo",
+        "descricao": "Buquê de rosas, mini rosas, mix de flores do campo, mosquitinho, folhagem seca marrom, eucalipto e finalizado com fita de cetim.",
+        "preco": 220,
+        "imagens": [
+          "frob.webp",
+          "frob2.webp",
+          "frob3.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de Rosas Brancas com eucalipto",
+        "descricao": "Buquê com rosas brancas, eucalipto, mosquitinho e finalizado com fita de cetim.",
+        "preco": 190,
+        "imagens": [
+          "fl.webp",
+          "fl2.webp",
+          "fl3.webp",
+          "floricultura files/1790014069785-fb327aba17.jpeg",
+          "floricultura files/1790014069785-730b6c17cc.jpeg",
+          "floricultura files/1790605537359-8cbb7e479b.jpeg",
+          "floricultura files/1790605537359-5a0435174d.jpeg",
+          "floricultura files/1790605537359-8ea4f9b0f1.jpeg"
+        ]
+      },
+      {
+        "titulo": "Buquê de Rosas com ruscus",
+        "descricao": "Buquê com rosas brancas, ruscus, mosquitinho e finalizado com fita de cetim.",
+        "preco": 180,
+        "imagens": [
+          "fb.webp",
+          "fb2.webp",
+          "fb3.webp"
+        ]
+      }
+    ],
+    "mais-vendidos": [
+      {
+        "titulo": "Buquê Encanto",
+        "descricao": "Buquê com 3 hastes de lírio de São José, mosquitinho, rosas vermelhas e eucalipto.",
+        "preco": 150,
+        "imagens": [
+          "li3.webp",
+          "li6.webp",
+          "li8.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê elegância",
+        "descricao": "buquê de rosas com aspargos",
+        "preco": 120,
+        "imagens": [
+          "../WhatsApp Image 2026-09-10 at 10.26.30(3).jpeg",
+          "../WhatsApp Image 2026-09-10 at 10.26.30(1).jpeg",
+          "../WhatsApp Image 2026-09-10 at 10.26.30(2).jpeg",
+          "../WhatsApp Image 2026-09-10 at 10.26.30.jpeg"
+        ]
+      },
+      {
+        "titulo": "Buquê Docilidade",
+        "descricao": "Buquê de rosas, astromélias e mosquitinho.",
+        "preco": 70,
+        "imagens": [
+          "../WhatsApp Image 2026-09-10 at 16.42.39(2).webp",
+          "in2.webp",
+          "in3.webp",
+          "in4.webp",
+          "in.webp",
+          "../docilidade/WhatsApp Image 2026-09-10 at 16.42.39(3).jpeg",
+          "floricultura files/1790606067460-c66b96ef2e.jpeg",
+          "floricultura files/1790606067461-4d8f05f484.jpeg"
+        ]
+      },
+      {
+        "titulo": "Buquê Harmonia",
+        "descricao": "Buquê com rosas vermelhas, girassóis, mosquitinho, aspargos e avencão.",
+        "preco": 140,
+        "imagens": [
+          "../armonia/WhatsApp Image 2026-09-12 at 14.21.24(2).jpeg",
+          "girab4.webp",
+          "../armonia/WhatsApp Image 2026-09-12 at 14.21.23(1).jpeg",
+          "../armonia/WhatsApp Image 2026-09-12 at 14.21.23.jpeg",
+          "../armonia/WhatsApp Image 2026-09-12 at 14.21.24(1).jpeg",
+          "girab2.webp",
+          "../armonia/WhatsApp Image 2026-09-12 at 14.21.24(3).jpeg",
+          "../armonia/WhatsApp Image 2026-09-12 at 14.21.24(4).jpeg",
+          "../armonia/WhatsApp Image 2026-09-12 at 14.21.24.jpeg"
+        ]
+      },
+      {
+        "titulo": "Buquê Tradicional",
+        "descricao": "Buquê com rosas vermelhas, ruscus, mosquitinho e aspargos.",
+        "preco": 130,
+        "imagens": [
+          "rosa5.webp",
+          "rosa.webp",
+          "rosa6.webp",
+          "floricultura files/1790606154130-257fa89db5.jpeg",
+          "floricultura files/1790606154130-194d1eb05d.jpeg",
+          "floricultura files/1790606154131-b6c51fc0eb.jpeg"
+        ]
+      },
+      {
+        "titulo": "Buquê Luz",
+        "descricao": "Buquê de rosas, girassóis, mosquitinho, flores do campo e aspargos.",
+        "preco": 70,
+        "imagens": [
+          "mu3.webp",
+          "mu2.webp",
+          "mu.webp",
+          "mu4.webp",
+          "mu5.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê Afeto",
+        "descricao": "Buquê de astromélias com mosquitinho.",
+        "preco": 45,
+        "imagens": [
+          "astrom.webp",
+          "astrom2.webp",
+          "in5.webp",
+          "in6.webp",
+          "floricultura files/1790605983540-810192d023.jpeg",
+          "floricultura files/1790605983541-7b57573e1e.jpeg"
+        ]
+      },
+      {
+        "titulo": "Buquê Facínio",
+        "descricao": "Buquê com 3 hastes de lírio, mosquitinho e eucalipto.",
+        "preco": 120,
+        "imagens": [
+          "../Buquê de lírio/WhatsApp Image 2026-09-10 at 18.21.37(1).jpeg",
+          "../Buquê de lírio/WhatsApp Image 2026-09-10 at 18.21.37(2).jpeg",
+          "../Buquê de lírio/WhatsApp Image 2026-09-10 at 18.21.37(3).jpeg",
+          "../Buquê de lírio/WhatsApp Image 2026-09-10 at 18.21.37.jpeg"
+        ]
+      }
+    ],
+    "rosas": [
+      {
+        "titulo": "Buquê de Rosas com Cervejas",
+        "descricao": "Buquê com 6 rosas importadas, 5 latinhas de cerveja, mosquitinho e avencão.",
+        "preco": null,
+        "imagens": [
+          "veja.webp",
+          "veja2.webp",
+          "veja3.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de Girassóis e Rosas Brancas",
+        "descricao": "Buquê com 3 rosas brancas, aspargos, 3 girassóis, mosquitinho e flores do campo mistas.",
+        "preco": 68,
+        "imagens": []
+      },
+      {
+        "titulo": "Buquê de Astromélias e Rosas Rosas",
+        "descricao": "Buquê com astromélias brancas, astromélias rosas, rosas cor-de-rosa e mosquitinho.",
+        "preco": 85,
+        "imagens": [
+          "roge.webp",
+          "roge1.webp",
+          "ult.webp",
+          "ult2.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de 18 Rosas Vermelhas",
+        "descricao": "Buquê com 18 rosas vermelhas importadas e aspargos.",
+        "preco": 118,
+        "imagens": [
+          "rosa4.webp",
+          "IMG-20260706-WA0038.webp",
+          "rose3.webp",
+          "IMG-20260706-WA0042.webp",
+          "IMG-20260706-WA0043.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de 10 Rosas Vermelhas e 10 Brancas",
+        "descricao": "Buquê com 10 rosas vermelhas, 10 rosas brancas e aspargos.",
+        "preco": 130,
+        "imagens": []
+      },
+      {
+        "titulo": "Buquê de Rosas Vermelhas e Mosquitinho",
+        "descricao": "Buquê com 10 rosas vermelhas, 10 rosas brancas e mosquitinho.",
+        "preco": 140,
+        "imagens": []
+      },
+      {
+        "titulo": "Buquê de Girassóis com Flores do Campo",
+        "descricao": "Buquê com 6 girassóis, mosquitinho, rosas brancas, avencão, estatice roxa e 6 rosas brancas.",
+        "preco": 150,
+        "imagens": [
+          "pl.webp",
+          "pl2.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de 6 Lírios de São José",
+        "descricao": "Buquê com 6 hastes de lírio de São José, eucalipto e mosquitinho.",
+        "preco": 250,
+        "imagens": []
+      },
+      {
+        "titulo": "Buquê de 48 Rosas Vermelhas",
+        "descricao": "Buquê intenso com 48 rosas vermelhas nacionais e aspargos.",
+        "preco": 580,
+        "imagens": []
+      }
+    ],
+    "mini": [
+      {
+        "titulo": "Mini Buquê de Girassol",
+        "descricao": "Mini buquê de girassol e aspargo.",
+        "preco": 20,
+        "imagens": [
+          "moni6.webp",
+          "moni5.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de girassol e mosquitnho",
+        "descricao": "...",
+        "preco": 35,
+        "imagens": [
+          "floricultura files/1790011393912-be312b23f9.jpeg",
+          "floricultura files/1790011393913-18cd83ab4a.jpeg"
+        ]
+      },
+      {
+        "titulo": "Mini Buquê de Rosa",
+        "descricao": "Mini buquê com rosa, astromélia e aspargo.",
+        "preco": 15,
+        "imagens": [
+          "floricultura files/1790015836948-fbdc98be19.jpeg",
+          "floricultura files/1790015836948-7fc55b23cc.jpeg",
+          "floricultura files/1790015836948-db50c735ac.jpeg",
+          "floricultura files/1790017689776-e9a0e908ad.jpeg",
+          "floricultura files/1790017689776-2d3e27cede.jpeg",
+          "floricultura files/1790017689776-5e6274e978.jpeg"
+        ]
+      },
+      {
+        "titulo": "Mini Buquê de Rosas e Ruscus",
+        "descricao": "Mini buquê com rosa, astromelia e ruscus.",
+        "preco": 38,
+        "imagens": [
+          "moni9.webp",
+          "mini4.webp",
+          "moni8.webp",
+          "floricultura files/1790605814182-5816a3044d.jpeg",
+          "floricultura files/1790605814182-5c54c95ed8.jpeg"
+        ]
+      },
+      {
+        "titulo": "Mini Buquê de 3 Rosas e Flores Brancas",
+        "descricao": "Mini buquê com 3 rosas, aspargo, flor branca e avencão.",
+        "preco": 28,
+        "imagens": [
+          "mini1.webp",
+          "moni0.webp",
+          "flo.webp",
+          "flo2.webp",
+          "flo3.webp",
+          "flo4.webp",
+          "floricultura files/1790605851045-cb06c98dbd.jpeg"
+        ]
+      },
+      {
+        "titulo": "Mini Buquê de Flores do Campo",
+        "descricao": "Mini buquê de flor do campo com aspargo.",
+        "preco": 15,
+        "imagens": [
+          "mini0.webp",
+          "otmini2.webp",
+          "otmini.webp",
+          "floricultura files/1790015691504-020f924ed8.jpeg",
+          "floricultura files/1790015691504-5a21a5fc62.jpeg",
+          "floricultura files/1790015691504-f81850a513.jpeg",
+          "floricultura files/1790606570476-52d1d490bc.jpeg",
+          "floricultura files/1790606570477-7ba9bb8106.jpeg"
+        ]
+      }
+    ],
+    "variados": [
+      {
+        "titulo": "Buquê de astromélias variadas",
+        "descricao": "",
+        "preco": 25,
+        "imagens": [
+          "../Astromélia/WhatsApp Image 2026-09-10 at 18.28.42.jpeg",
+          "../Astromélia/WhatsApp Image 2026-09-10 at 18.28.43(1).jpeg",
+          "../Astromélia/WhatsApp Image 2026-09-10 at 18.28.43(2).jpeg",
+          "../Astromélia/WhatsApp Image 2026-09-10 at 18.28.43(3).jpeg",
+          "../Astromélia/WhatsApp Image 2026-09-10 at 18.28.43(4).jpeg",
+          "../Astromélia/WhatsApp Image 2026-09-10 at 18.28.43.jpeg"
+        ]
+      },
+      {
+        "titulo": "Buquê de Girassol com Flores Azuis",
+        "descricao": "Buquê de girassol, flor do campo azul e Mosquitinho.",
+        "preco": 120,
+        "imagens": [
+          "girazu.webp",
+          "girazu2.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de Rosas e aspargos",
+        "descricao": "",
+        "preco": "Sob orçamento",
+        "imagens": [
+          "../Rosas e aspargos/WhatsApp Image 2026-09-10 at 18.33.10(1).jpeg",
+          "../Rosas e aspargos/WhatsApp Image 2026-09-10 at 18.33.10(2).jpeg",
+          "../Rosas e aspargos/WhatsApp Image 2026-09-10 at 18.33.10.jpeg"
+        ]
+      },
+      {
+        "titulo": "Buquê de Lírios variados",
+        "descricao": "Buquê com 3 hastes de lírio de São José e composição personalizada.",
+        "preco": 140,
+        "imagens": [
+          "../Buque de lírio/WhatsApp Image 2026-09-10 at 18.34.57.jpeg",
+          "../Buque de lírio/WhatsApp Image 2026-09-10 at 18.34.58(1).jpeg",
+          "../Buque de lírio/WhatsApp Image 2026-09-10 at 18.34.58.jpeg",
+          "../Buque de lírio/WhatsApp Image 2026-09-10 at 18.34.59(1).jpeg",
+          "../Buque de lírio/WhatsApp Image 2026-09-10 at 18.34.59(2).jpeg",
+          "../Buque de lírio/WhatsApp Image 2026-09-10 at 18.34.59.jpeg"
+        ]
+      },
+      {
+        "titulo": "Buquê de lírio bicolor",
+        "descricao": "Buquê com 6 hastes de lírio em duas cores, mosquitinho e eucalipto.",
+        "preco": 250,
+        "imagens": [
+          "../Lírio bicolor/WhatsApp Image 2026-09-10 at 18.16.42(1).jpeg",
+          "../Lírio bicolor/WhatsApp Image 2026-09-10 at 18.16.42(2).jpeg",
+          "../Lírio bicolor/WhatsApp Image 2026-09-10 at 18.16.42.jpeg",
+          "../Lírio bicolor/WhatsApp Image 2026-09-10 at 18.16.43(1).jpeg",
+          "../Lírio bicolor/WhatsApp Image 2026-09-10 at 18.16.43.jpeg"
+        ]
+      },
+      {
+        "titulo": "Buquê de girassol",
+        "descricao": "Buquê com girassol, flores do campo, mosquitinho e eucalipto.",
+        "preco": 45,
+        "imagens": [
+          "../Buque de girassol/WhatsApp Image 2026-09-10 at 18.38.04(1).jpeg",
+          "../Buque de girassol/WhatsApp Image 2026-09-10 at 18.38.04.jpeg"
+        ]
+      },
+      {
+        "titulo": "Buquê temático",
+        "descricao": "Buquê com girassol, rosas, Estatice, mosquitinho e avencão.",
+        "preco": 180,
+        "imagens": [
+          "../buque temático/WhatsApp Image 2026-09-10 at 18.36.36(1).jpeg",
+          "../buque temático/WhatsApp Image 2026-09-10 at 18.36.36.jpeg"
+        ]
+      },
+      {
+        "titulo": "Buquê personalizado",
+        "descricao": "Buquê personalizado com flores e até 5 bebidas em lata.",
+        "preco": null,
+        "imagens": [
+          "../Buquê personalizado/WhatsApp Image 2026-09-10 at 18.12.14.jpeg",
+          "../Buquê personalizado/WhatsApp Image 2026-09-10 at 18.12.15(1).jpeg",
+          "../Buquê personalizado/WhatsApp Image 2026-09-10 at 18.12.15(2).jpeg",
+          "../Buquê personalizado/WhatsApp Image 2026-09-10 at 18.12.15.jpeg"
+        ]
+      },
+      {
+        "titulo": "Buquê de Rosas com Ruscus",
+        "descricao": "...",
+        "preco": 65,
+        "imagens": [
+          "ruscus2.webp",
+          "ruscus.webp",
+          "ruscus3.webp",
+          "ruscus4.webp",
+          "floricultura files/1790267854972-22d8d4f4eb.jpeg"
+        ]
+      },
+      {
+        "titulo": "Buquê de girassóis",
+        "descricao": "Buquê com girassóis, mosquitinho, avencão e aspargo.",
+        "preco": 130,
+        "imagens": [
+          "../Buquê 12 girassóis/WhatsApp Image 2026-09-12 at 14.31.34.jpeg",
+          "../Buquê 12 girassóis/WhatsApp Image 2026-09-12 at 14.31.35(1).jpeg",
+          "../Buquê 12 girassóis/WhatsApp Image 2026-09-12 at 14.31.35.jpeg"
+        ]
+      },
+      {
+        "titulo": "Buquês de girassóis variados",
+        "descricao": "Buquês de girassóis com composições variadas.",
+        "preco": 38,
+        "imagens": [
+          "../Buquê de girasois variados/WhatsApp Image 2026-09-12 at 14.35.07(2).jpeg",
+          "../Buquê de girasois variados/WhatsApp Image 2026-09-12 at 14.35.08(1).jpeg",
+          "../Buquê de girasois variados/WhatsApp Image 2026-09-12 at 14.35.08(3).jpeg",
+          "../Buquê de girasois variados/WhatsApp Image 2026-09-12 at 14.35.08(4).jpeg",
+          "../Buquê de girasois variados/WhatsApp Image 2026-09-12 at 14.35.08.jpeg",
+          "floricultura files/1790606361138-9b15910432.jpeg",
+          "floricultura files/1790606361138-6ec891ee28.jpeg",
+          "floricultura files/1790606361138-8252f1aacc.jpeg"
+        ]
+      },
+      {
+        "titulo": "Buquê de Rosas, Astromélias e Gérberas",
+        "descricao": "...",
+        "preco": 70,
+        "imagens": [
+          "astroge3.webp",
+          "astroge2.webp",
+          "astroge1.webp",
+          "astroge4.webp",
+          "astroge5.webp",
+          "floricultura files/1790606426536-624de42d15.jpeg",
+          "floricultura files/1790606426536-9ef10dc508.jpeg"
+        ]
+      }
+    ],
+    "artesanais": [
+      {
+        "titulo": "Buquê de Flores Felpudas",
+        "descricao": "Buquê personalizável de flores felpudas e flores secas.",
+        "preco": 20,
+        "imagens": [
+          "psf.webp",
+          "girof2.webp",
+          "art.webp",
+          "art3.webp",
+          "art4.webp",
+          "girof.webp",
+          "girof5.webp",
+          "nn.webp",
+          "nn2.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de Cetim",
+        "descricao": "Buquê personalizado com rosas artesanais de cetim.",
+        "preco": 18,
+        "imagens": [
+          "c3.webp",
+          "c2.webp",
+          "c4.webp",
+          "../cap2.webp",
+          "ce.webp",
+          "ce2.webp",
+          "ce3.webp",
+          "ce4.webp",
+          "floricultura files/1790268551934-abd07cd7bf.jpeg",
+          "floricultura files/1790268551934-0cea6ffa1e.jpeg",
+          "floricultura files/1790268551934-3ba144dc1f.jpeg"
+        ]
+      }
+    ],
+    "caixa": [
+      {
+        "titulo": "Arranjo no Cachepô",
+        "descricao": "Arranjo de flores mistas com cachepô de papel.",
+        "preco": 65,
+        "imagens": [
+          "cx65.webp",
+          "cx651.webp",
+          "cx652.webp",
+          "cx653.webp",
+          "floricultura files/1790268669547-4809ac6c75.jpeg"
+        ]
+      },
+      {
+        "titulo": "Mini Arranjo no cachepô",
+        "descricao": "Mini arranjo na espuma floral com flores mistas e cachepô de papel.",
+        "preco": 45,
+        "imagens": [
+          "floricultura files/1790268826270-180632c4d4.jpeg",
+          "floricultura files/1790268826270-727718d893.jpeg"
+        ]
+      },
+      {
+        "titulo": "Arranjo de astromelias e mosquitinho",
+        "descricao": "Arranjo na caixa cartonada com astromelias coloridas e mosquitinho.  Em 2 tamanhos disponíveis.",
+        "preco": 120,
+        "imagens": [
+          "floricultura files/1790269066626-fa692207ac.jpeg",
+          "floricultura files/1790269066626-5de8b0b5c4.jpeg",
+          "floricultura files/1790269066627-b79b66316b.jpeg"
+        ]
+      },
+      {
+        "titulo": "Arranjo personalizado",
+        "descricao": "Arranjo na sacola cartonada com alça de couro, com flores variadas e composição personalizada.",
+        "preco": 155,
+        "imagens": [
+          "floricultura files/1790269251827-a254b87d80.jpeg",
+          "floricultura files/1790269251827-28cbf07c7b.jpeg",
+          "floricultura files/1790269251827-058513b4e9.jpeg",
+          "floricultura files/1790269251828-f0aa68b7f0.jpeg",
+          "floricultura files/1790269251828-da036eacbc.jpeg"
+        ]
+      },
+      {
+        "titulo": "Arranjo de Astromélias e gérberas",
+        "descricao": "Arranjo na caixa com laço, astromélias coloridas e gérberas. Em 2 tamanhos disponíveis.",
+        "preco": 120,
+        "imagens": [
+          "cx.webp",
+          "cx2.webp",
+          "cx3.webp",
+          "cx4.webp",
+          "cxz.webp",
+          "cxz2.webp",
+          "cxz3.webp"
+        ]
+      },
+      {
+        "titulo": "Caixa de Rosas com Laço",
+        "descricao": "Arranjo na caixa cartonada com rosas e laço.",
+        "preco": null,
+        "imagens": [
+          "cxro.webp",
+          "cxro2.webp",
+          "cxro1.webp",
+          "floricultura files/1790269566738-b2f82246c5.jpeg",
+          "floricultura files/1790269566739-b4eb398922.jpeg"
+        ]
+      },
+      {
+        "titulo": "Arranjos variados",
+        "descricao": "Arranjo na caixa cartonada com mix de flores personalizado. Em 2 tamanhos disponíveis.",
+        "preco": 120,
+        "imagens": [
+          "floricultura files/1790607002309-0a93553199.jpeg",
+          "floricultura files/1790607002309-3d964239cc.jpeg",
+          "floricultura files/1790607002309-827c71dbea.jpeg",
+          "floricultura files/1790607002309-4087499725.jpeg",
+          "floricultura files/1790607002309-860fad92bc.jpeg"
+        ]
+      },
+      {
+        "titulo": "Arranjo de Astromélias e Flores do Campo",
+        "descricao": "Arranjo de astromélias e flores do campo na caixa cartonada com laço de cetim. Em 2 tamanhos disponíveis.",
+        "preco": 120,
+        "imagens": [
+          "cxx.webp",
+          "cxx2.webp",
+          "cld.webp",
+          "cld2.webp",
+          "floricultura files/1790619259944-87afe76e0d.jpeg",
+          "floricultura files/1790619259945-7fbbd68d36.jpeg"
+        ]
+      }
+    ]
+  },
+  "cestas": [
+    {
+      "titulo": "Caixa de Flores Mistas com Vinho ou Espumante",
+      "descricao": "Arranjo de flores mistas na caixa cartonada com adicional de espumante ou vinho, embrulho decorativo e laço de cetim.",
+      "preco": null,
+      "imagens": [
+        "cxvi.webp"
+      ]
+    },
+    {
+      "titulo": "Mini café da manhã",
+      "descricao": "Cesta contém: suco, bolinho, geleia, açúcar, xícara de porcelana com pires e colher, chá, adoçante, biscoito e suculenta.",
+      "preco": 65,
+      "imagens": [
+        "ce110.webp",
+        "ce111.webp"
+      ]
+    },
+    {
+      "titulo": "Cesta com Orquídea Pequena",
+      "descricao": "Cesta na caixa cartonada com orquídea Phalaenopsis pequena, Ferrero de 4 bombons e caneca.",
+      "preco": 132,
+      "imagens": [
+        "ce92.webp",
+        "ce91.webp",
+        "ce93.webp"
+      ]
+    },
+    {
+      "titulo": "Box de Balão Personalizado e Doces",
+      "descricao": "Arranjo de balão personalizado, caixa cartonada, amendoim, Twix, ouro branco, fini, caixa de bombom, suco e KitKat. Encomende com 2 dias de antecedência.",
+      "preco": 190,
+      "imagens": [
+        "ce30.webp",
+        "ce31.webp",
+        "ce302.webp"
+      ]
+    },
+    {
+      "titulo": "Canecas variadas",
+      "descricao": "Canecas variadas de time, feliz aniversário, amor, amizade e demais temas personalizados. Sujeitos á disponibilidade da loja.",
+      "preco": 25,
+      "imagens": [
+        "floricultura files/1790012414471-cde8a1be44.jpeg"
+      ]
+    },
+    {
+      "titulo": "Cesta Envelope + Balão",
+      "descricao": "Cesta personalizável com buquê de astromélias, Ferrero Rocher e balão personalizado.",
+      "preco": 138,
+      "imagens": [
+        "ce0.webp",
+        "ce01.webp",
+        "ce02.webp",
+        "ce03.webp",
+        "ce04.webp",
+        "ce05.webp"
+      ]
+    },
+    {
+      "titulo": "Cesta de Cervejas com Suculenta",
+      "descricao": "Cesta contém: 2 cervejas, pacote de amendoim e uma suculenta. Somente +18.",
+      "preco": 70,
+      "imagens": [
+        "floricultura files/1790096826671-79691e4007.jpeg",
+        "floricultura files/1790096826671-475d8bea77.jpeg",
+        "floricultura files/1790096826671-1e409bb6a1.jpeg",
+        "floricultura files/1790096826671-7b780f4dfc.jpeg"
+      ]
+    },
+    {
+      "titulo": "Flor & Ferrero",
+      "descricao": "Cesta com Kalanchoe (flor no vasinho pequeno) e um Ferrero de 4 bombons.",
+      "preco": 48,
+      "imagens": [
+        "ce74.webp",
+        "ce71.webp"
+      ]
+    },
+    {
+      "titulo": "Cesta Envelope",
+      "descricao": "Cesta envelope com buquê de astromelias e Ferrero Rocher com 8 bombons.",
+      "preco": 95,
+      "imagens": [
+        "floricultura files/1790018440634-028e6909e5.jpeg",
+        "floricultura files/1790018440634-9ad14b4c0f.jpeg",
+        "floricultura files/1790018440634-ce5c2d7e7c.jpeg",
+        "floricultura files/1790018440634-bc10d29b5e.jpeg",
+        "floricultura files/1790018440634-d11297df39.jpeg"
+      ]
+    },
+    {
+      "titulo": "Bento Cake",
+      "descricao": "Bento cake (mini bolo, aprox. 600g) com personalização em papel de arroz ou trabalho de bico. Sabores: brigadeiro preto, brigadeiro branco, prestígio, ninho e doce de leite. Encomende com 3 dias de antecedência.",
+      "preco": 56,
+      "imagens": [
+        "floricultura files/1790012890120-20b012ff69.jpeg",
+        "floricultura files/1790012890120-228e021ccf.jpeg",
+        "floricultura files/1790012890121-3b5f26a44c.jpeg",
+        "floricultura files/1790012890121-a4c3c8dd91.jpeg",
+        "floricultura files/1790012890121-85d8d07afa.jpeg",
+        "floricultura files/1790012890121-830cb8f3eb.jpeg",
+        "floricultura files/1790012890121-e801129e2f.jpeg",
+        "floricultura files/1790012890122-3cc63b37da.jpeg",
+        "floricultura files/1790012890122-4060414960.jpeg",
+        "floricultura files/1790012890122-27b0a63c5f.jpeg",
+        "floricultura files/1790012890122-cdbe314470.jpeg"
+      ]
+    },
+    {
+      "titulo": "Mini Festa com Bento Cake e Balão",
+      "descricao": "Cesta personalizável com tema ou foto, bento cake e balão personalizado. Sabores: brigadeiro preto, brigadeiro branco, prestígio, ninho e doce de leite. Encomende com 3 dias de antecedência.",
+      "preco": 140,
+      "imagens": [
+        "floricultura files/1790270502928-a6dd462d4b.png",
+        "floricultura files/1790270502929-6e92a59b37.jpeg",
+        "floricultura files/1790270502929-e9b45ed8d0.jpeg"
+      ]
+    },
+    {
+      "titulo": "Café da Manhã Especial",
+      "descricao": "Cesta contém: mini bolo (sabores), uva, mini pão francês, mini pão de queijo, caneca com suculenta, geleias, bolacha, suco e cappuccino 3 corações.",
+      "preco": 150,
+      "imagens": [
+        "floricultura files/1790270611492-bd022fe6ae.jpeg",
+        "floricultura files/1790270611492-0216075c72.jpeg"
+      ]
+    },
+    {
+      "titulo": "Cesta de Café &arranjo",
+      "descricao": "Cesta contém: cappuccino 3 corações, suco, mini pão francês, mini pão de queijo, uva, caneca, chá, Ferrero de 4 bombons, bandeja com pernas e arranjo misto no vaso de vidro. Encomende com 2 dias de antecedência.",
+      "preco": 260,
+      "imagens": [
+        "ce66.webp",
+        "ce61.webp",
+        "ce62.webp",
+        "ce63.webp",
+        "ce65.webp"
+      ]
+    },
+    {
+      "titulo": "Café Premium",
+      "descricao": "Cesta contém: água de coco, iogurte, Toddynho, suco, bolinho, pãezinhos, frios, biscoito salgado, torradinha, Oreo, frutas, lanche natural, Polenguinho, Ferrero Rocher e ursinho de pelúcia. Encomende com 2 dias de antecedência.",
+      "preco": 380,
+      "imagens": [
+        "floricultura files/1790270828503-df03cec099.jpeg",
+        "floricultura files/1790270828504-205a15ecee.jpeg",
+        "floricultura files/1790270828504-fc347b02c2.jpeg"
+      ]
+    },
+    {
+      "titulo": "Cafézinho & Mini Buquê",
+      "descricao": "Cesta contém: torrada, bolachas, suco, cappuccino solúvel, kit de xícara, pires e colher e um mini buquê.",
+      "preco": 78,
+      "imagens": [
+        "ce10.webp",
+        "ce11.webp",
+        "ce12.webp",
+        "ce13.webp",
+        "ce14.webp",
+        "ce15.webp"
+      ]
+    },
+    {
+      "titulo": "Café de vovó",
+      "descricao": "Cesta contém: mini arranjo de flores mistas com vidro, kit de chá, mini bolo (sabores) e foto estilo polaroide.",
+      "preco": 95,
+      "imagens": [
+        "ce41.webp",
+        "../ce42.webp",
+        "ce40.webp"
+      ]
+    },
+    {
+      "titulo": "Cesta com Orquídea e Pelúcia",
+      "descricao": "Cesta contém: pelúcia e orquídea phalaenopsis média.",
+      "preco": 145,
+      "imagens": [
+        "ce72.webp",
+        "cesus.webp"
+      ]
+    },
+    {
+      "titulo": "Café da Manhã Completo",
+      "descricao": "Cesta contém: vaso de Kalanchoe (flores), pães variados (pão francês e pão de queijo), suco, cappuccino, Polenguinho, requeijão, pacote de biscoito Cream Cracker Crocantíssimo, bolinho, caixa de bombons, caneca, e cappuccino solúvel.",
+      "preco": 185,
+      "imagens": [
+        "floricultura files/1790011749194-eed6c58d32.jpeg",
+        "floricultura files/1790011749195-e0153a183c.jpeg",
+        "floricultura files/1790011749195-d8ea6cff9e.jpeg",
+        "floricultura files/1790607758515-ad5f0bf928.jpeg",
+        "floricultura files/1790607758515-7d6801144b.jpeg"
+      ]
+    },
+    {
+      "titulo": "Cesta de time",
+      "descricao": "Cesta com caneca de time, almofada de time e Ferrero Rocher de 4 bombons.",
+      "preco": 95,
+      "imagens": [
+        "floricultura files/1790701614560-90d6127f61.jpeg",
+        "floricultura files/1790701614560-5777519d5a.jpeg"
+      ]
+    }
+  ],
+  "baloes": [
+    {
+      "titulo": "Arranjo com balão",
+      "descricao": "Arranjo na caixa com flores mistas e balão personalizado. Dois tamanhos disponíveis.",
+      "preco": 165,
+      "imagens": [
+        "b.webp",
+        "b2.webp",
+        "b3.webp",
+        "b4.webp",
+        "b5.webp",
+        "b6.webp"
+      ]
+    },
+    {
+      "titulo": "Buquê + Balão",
+      "descricao": "Buquês personalizados com adicional de balão personalizado.",
+      "preco": 65,
+      "imagens": [
+        "floricultura files/1790017891824-917d3fa253.jpeg",
+        "floricultura files/1790017891824-cc0500c954.jpeg",
+        "floricultura files/1790017891824-c855aad5bd.jpeg",
+        "floricultura files/1790017891824-e731ae2ef1.jpeg"
+      ]
+    },
+    {
+      "titulo": "Mini Balão",
+      "descricao": "Mini balão na vareta e personalizado.",
+      "preco": 30,
+      "imagens": [
+        "floricultura files/1790017754699-a5def23e6b.jpeg",
+        "floricultura files/1790017754699-531735ad71.jpeg"
+      ]
+    },
+    {
+      "titulo": "Balão Bubble",
+      "descricao": "Balão personalizado na vareta. Em dois tamanhos disponíveis.",
+      "preco": 45,
+      "imagens": [
+        "bl.webp",
+        "bl2.webp",
+        "bl3.webp",
+        "bl4.webp"
+      ]
+    },
+    {
+      "titulo": "BalãoPersonalizado",
+      "descricao": "Arranjo de balão personalizado com base de bexiga. Dois tamanhos disponíveis.",
+      "preco": 50,
+      "imagens": [
+        "B0.webp",
+        "B1.webp",
+        "B02.webp",
+        "B03.webp",
+        "B04.webp"
+      ]
+    }
+  ],
+  "plantas": [
+    {
+      "titulo": "Suculenta",
+      "descricao": "Suculenta no pote 6 sem encarte. Levando 15 unidades, nosso preço promocional é de 30,00 reais a caixa.",
+      "preco": 3,
+      "imagens": [
+        "floricultura files/1790271537832-95fa0ededc.jpeg",
+        "floricultura files/1790271537832-8a050fab24.jpeg"
+      ]
+    },
+    {
+      "titulo": "Terra 25kg",
+      "descricao": "Terra vegetal preta para todo tipo de plantio. Saco com 25kg.",
+      "preco": 18,
+      "imagens": [
+        "floricultura files/1790020153037-e4e5d3fe15.jpeg"
+      ]
+    },
+    {
+      "titulo": "Substrato para Cultivo de Orquídeas",
+      "descricao": "Contém chips de coco, casca de pinus e carvão vegetal. Fórmula ideal para o cultivo saudável de orquídeas.",
+      "preco": 20,
+      "imagens": [
+        "floricultura files/1790271610338-4b3ab12ac0.jpeg"
+      ]
+    },
+    {
+      "titulo": "Orquídea Phalaenopsis",
+      "descricao": "Orquídea da espécie Phalaenopsis em cores e tamanhos confirme a disponibilidade na loja. Ideal para decoração de ambientes internos.",
+      "preco": 56,
+      "imagens": [
+        "floricultura files/1790271763054-74e774e6f2.jpeg",
+        "floricultura files/1790271763054-095f2c66f0.jpeg",
+        "floricultura files/1790271763054-0294b4be21.jpeg"
+      ]
+    },
+    {
+      "titulo": "Orquídea Cymbidium",
+      "descricao": "Orquídea da espécie Cymbidium em cores confirme a disponibilidades na loja.",
+      "preco": 48,
+      "imagens": [
+        "floricultura files/1790271832389-4807d9d6e9.jpeg"
+      ]
+    },
+    {
+      "titulo": "Espuma Floral",
+      "descricao": "Tijolo de espuma floral para arranjos naturais.",
+      "preco": 7,
+      "imagens": [
+        "floricultura files/1790271877526-5d52570162.jpeg"
+      ]
+    },
+    {
+      "titulo": "Vaso de vidro",
+      "descricao": "Vasos de vidro variados.",
+      "preco": 18,
+      "imagens": [
+        "floricultura files/1790276907637-f4ad09f50e.jpeg",
+        "floricultura files/1790276907637-44523518a6.jpeg",
+        "floricultura files/1790276907637-a4ac32b951.jpeg",
+        "floricultura files/1790276907637-43600882b8.jpeg",
+        "floricultura files/1790276907637-a96248531d.jpeg"
+      ]
+    },
+    {
+      "titulo": "Bambu da Sorte",
+      "descricao": "Bambu da sorte cultivado na água com suportes variados.",
+      "preco": 20,
+      "imagens": [
+        "floricultura files/1790277020210-b9e4fe9771.jpeg",
+        "floricultura files/1790277020210-28796fbb66.jpeg",
+        "floricultura files/1790277020211-fd8a4a795e.jpeg",
+        "floricultura files/1790277020211-db9d068c82.jpeg",
+        "floricultura files/1790277020211-b2aea8db9c.jpeg",
+        "floricultura files/1790277020211-8e36e66b9c.jpeg"
+      ]
+    },
+    {
+      "titulo": "Muda de bambu",
+      "descricao": "...",
+      "preco": 6,
+      "imagens": [
+        "floricultura files/1790277071014-c1f0bf23f3.jpeg"
+      ]
+    },
+    {
+      "titulo": "Pendentes",
+      "descricao": "Plantas pendentes variadas como: Samambia, peixinho vermelho, Peperomia, Jiboia etc...",
+      "preco": 30,
+      "imagens": [
+        "floricultura files/1790278461984-ad94b73842.jpeg",
+        "floricultura files/1790278461984-c95284fdaa.jpeg",
+        "floricultura files/1790278461985-764c6c3706.jpeg",
+        "floricultura files/1790278461985-4f21594d5e.jpeg",
+        "floricultura files/1790278461985-9eaf4b03e2.jpeg"
+      ]
+    },
+    {
+      "titulo": "Zamioculca",
+      "descricao": "...",
+      "preco": 46,
+      "imagens": [
+        "floricultura files/1790278590634-6c62ae6536.jpeg"
+      ]
+    },
+    {
+      "titulo": "Lírio da Paz",
+      "descricao": "...",
+      "preco": 30,
+      "imagens": [
+        "floricultura files/1790278619454-7d311871e2.jpeg"
+      ]
+    }
+  ],
+  "vasos": [],
+  "personalizados": [
+    {
+      "titulo": "Itens em MDF",
+      "descricao": "Personalizações variadas de ícones, chaveiros, imagens etc. em MDF.",
+      "preco": null,
+      "imagens": [
+        "floricultura files/1790271361043-e05484db20.jpeg",
+        "floricultura files/1790271361043-3387bd3db8.jpeg",
+        "floricultura files/1790271361043-b8e7dbf201.jpeg",
+        "floricultura files/1790271361043-cb0e50ab90.jpeg",
+        "floricultura files/1790271361043-624ac3b305.jpeg",
+        "floricultura files/1790271361043-a8da2290c4.jpeg",
+        "floricultura files/1790271361043-430a550c3d.jpeg",
+        "floricultura files/1790271361043-1cda19c7a5.jpeg",
+        "floricultura files/1790271361043-946b0212eb.jpeg",
+        "floricultura files/1790271361043-8a505c7b56.jpeg"
+      ]
+    },
+    {
+      "titulo": "Suculenta P Personalizada",
+      "descricao": "Suculenta P com encarte e tag de papel personalizado. Caixa com 15 unidades.",
+      "preco": 80,
+      "imagens": [
+        "floricultura files/1790019081154-109ec66c6b.jpeg",
+        "floricultura files/1790019081154-1b94f9215f.jpeg",
+        "floricultura files/1790606701530-47b9ae9de1.jpeg",
+        "floricultura files/1790606701530-9e26077376.jpeg"
+      ]
+    }
+  ],
+  "observacoes": [
+    "Preços de referência do Catálogo 2026 — sujeitos a alteração conforme sazonalidade e disponibilidade. Todos os modelos podem ser personalizados mediante orçamento.",
+    "Sinal de 50% na confirmação do pedido. Cancelamento com devolução integral do sinal dentro do prazo (pedidos ter/qua/qui: até sábado 14h; pedidos sex/sáb/seg: até quarta-feira 17h). Fora do prazo, sem devolução.",
+    "Itens sem preço definido no catálogo novo: buquê 'Essência' (rosas + cerveja) e alguns buquês/arranjos mais antigos que não aparecem no catálogo 2026 — mantidos com preco: null até confirmação.",
+    "Preços atualizados em relação ao valor antigo do site: 'Mini Cesta' (Kalanchoe) de R$48 para R$52; 'Mini Cesta Café da Manhã com Arranjo' de R$82 para R$95; 'Cesta Café da Manhã com Arranjo' de R$250 para R$260; 'Aquarela' de R$148 para R$138."
+  ],
+  "assinaturaFloral": {
+    "kicker": "Planos e Experiências",
+    "title": "O frescor da natureza no seu dia a dia.",
+    "text": "Selecione a assinatura que mais combina com seu estilo e transforme qualquer ambiente em um lar.",
+    "name": "Pétala",
+    "caption": "flores para dizer o que importa"
+  },
+  "assinaturas": [
+    {
+      "titulo": "Florescer",
+      "descricao": "Um Arranjo de porte médio a grande, autoral marcante com grande variedade de flores frescas nobres e da estação. Mimos inclusos: Acompanha Guia de Cuidados exclusivo e sachê de conservante floral para prolongar a vida e a beleza das suas flores na água.",
+      "preco": 125,
+      "imagens": [
+        "floricultura files/1790623662389-f114eef2a5.jpeg"
+      ]
+    },
+    {
+      "titulo": "Colação Ambiente",
+      "descricao": "Arranjo de porte Médio, de autoria própria com seleção de flores frescas da estação.\nMimos inclusos: Acompanha Guia de Cuidados exclusivo e sachê de conservante floral para prolongar a vida e a beleza das suas flores na água.",
+      "preco": 89.9,
+      "imagens": [
+        "floricultura files/1790622849888-b566122b00.jpeg"
+      ]
+    },
+    {
+      "titulo": "Gestos",
+      "descricao": "Buquês delicados com flores frescas da estação e composições variadas. Mimos inclusos: Acompanha embrulho especial, além de uma foto Polaroid exclusiva do modelo entregue para guardar de lembrança.",
+      "preco": 89.9,
+      "imagens": [
+        "floricultura files/1790623973849-7093e6f987.jpeg"
+      ]
+    },
+    {
+      "titulo": "Gentil",
+      "descricao": "Buquês de porte médio e grande, exuberantes e com rica variedade de flores frescas selecionadas. Mimos inclusos: Acompanha embrulho especial, além de uma foto Polaroid exclusiva do modelo entregue para guardar de lembrança.",
+      "preco": 145,
+      "imagens": [
+        "floricultura files/1790624154755-0437f3c4a7.jpeg"
+      ]
+    }
+  ]
+}

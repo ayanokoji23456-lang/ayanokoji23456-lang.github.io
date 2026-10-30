@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pétala Floricultura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Responsividade para títulos e preços de produtos */
+        @media (max-width: 576px) {
+            .header-produto-mobile {
+                flex-direction: column;
+                align-items: flex-start !important;
+            }
+            .preco-mobile {
+                font-size: 1.1em !important;
+                margin-left: 0 !important;
+                margin-top: 8px;
+            }
+            .titulo-mobile h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" aria-label="Navegação Principal">
+        <a href="#" onclick="mudarPagina('Buques'); return false;" class="logo"><img src="Pétala Floricultura_files/logo.webp" alt="Logo da Pétala"> Pétala</a>
+        <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menu de navegação" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+         <ul class="nav-links" id="nav-list">
+            <li><button class="active" onclick="mudarPagina('Buques')">Buquês e arranjos</button></li>
+            <li><button onclick="mudarPagina('Balao')">Balões</button></li>
+            <li><button onclick="mudarPagina('cesta')">Cestas e presentes</button></li>
+            <li><button onclick="mudarPagina('perso')">Personalizados</button></li>
+            <li><button onclick="mudarPagina('Plantas/Flores')">Plantas</button></li>
+            <li><button onclick="mudarPagina('Vasos')">Jardim</button></li>
+            <li><button onclick="mudarPagina('info')">informações gerais</button></li>
+        </ul>
+    </nav>
+<header class="banner">
+    <h1 id="banner-titulo">Nossos Buquês</h1>
+</header>
+
+<main class="decorado2">
+    <section id="Buques" class="page-section active">
+        <div class="caixa-destaque">
+            <details>
+                <summary>Buquês de noivas</summary>
+                <div id="lista-buques-noivas"></div>
+            </details>
+        </div>
+         
+        <div class="caixa-destaque">
+            <details>
+                <summary>Mini Buquês</summary>
+                <div id="lista-mini-buques"></div>
+            </details>
+        </div>
+
+        <div class="caixa-destaque">
+            <details>
+                <summary>Mais vendidos</summary>
+                <div id="lista-mais-vendidos"></div>
+            </details>
+        </div>
+
+        <div class="caixa-destaque">
+            <details>
+                <summary>Buquês Variados</summary>
+                <div id="lista-buques-variados"></div>
+            </details>
+        </div>
+
+        <div class="caixa-destaque">
+            <details>
+                <summary>Buquês Artesanais</summary>
+                <div id="lista-buques-artesanais"></div>
+            </details>
+        </div>
+
+        <div class="caixa-destaque">
+            <details>
+                <summary>Arranjo na caixa</summary>
+                <div id="lista-arranjo-caixa"></div>
+            </details>
+        </div>
+    </section>
+
+    <section id="Balao" class="page-section" aria-labelledby="Balao">
+        <div class="caixa-destaque">
+            <div id="lista-baloes"></div>
+        </div>
+    </section>
+
+    <section id="Plantas/Flores" class="page-section" aria-labelledby="Plantas/Flores">
+        <div class="caixa-destaque">
+            <div id="lista-plantas"></div>
+        </div>
+    </section>
+        
+    <section id="Vasos" class="page-section" aria-labelledby="Vasos">
+        <div class="caixa-destaque">
+            <div id="lista-vasos"></div>
+        </div>
+    </section>
+
+    <section id="info" class="page-section" aria-labelledby="info">
+        <div class="caixa-destaque">
+            <article class="bloco-texto">
+                <h2>Quem somos?</h2>
+                <p class="paragrafo-grande">Nossa história começou em 2023, com um perfil no Instagram. As opções eram limitadas e sob encomenda. Algum tempo depois conseguimos um espaço e montamos nossa barraca na feira noturna, onde cercados de plantas ornamentais, hortaliças e cachepôs, criamos nossos primeiros laços reais com vocês.</p>
+                <div class="carrossel-container" data-indice="0">
+                    <div class="carrossel-slides">
+                        <div class="slide"><img src="talita.webp" alt="Imagem 1"></div>
+                        <div class="slide"><img src="primo.webp" alt="Imagem 2"></div>
+                        <div class="slide"><img src="segund.webp" alt="Imagem 3"></div>
+                        <div class="slide"><img src="001.webp" alt="Imagem 4"></div>
+                        <div class="slide"><img src="002.webp" alt="Imagem 5"></div>
+                        <div class="slide"><img src="003.webp" alt="Imagem 6"></div>
+                        <div class="slide"><img src="004.webp" alt="Imagem 7"></div>
+                        <div class="slide"><img src="200.webp" alt="Imagem 1"></div>
+                        <div class="slide"><img src="201.webp" alt="Imagem 2"></div>
+                        <div class="slide"><img src="202.webp" alt="Imagem 3"></div>
+                        <div class="slide"><img src="203.webp" alt="Imagem 4"></div>
+                        <div class="slide"><img src="005.webp" alt="Imagem 5"></div>
+                        <div class="slide"><img src="006.webp" alt="Imagem 6"></div>
+                        <div class="slide"><img src="007.webp" alt="Imagem 7"></div>
+                        <div class="slide"><img src="008.webp" alt="Imagem 8"></div>
+                        <div class="slide"><img src="009.webp" alt="Imagem 9"></div>
+                        <div class="slide"><img src="0010.webp" alt="Imagem 10"></div>
+                    </div>
+                    <button class="botao-prev" onclick="mudarSlide(this, -1)">&#10094;</button>
+                    <button class="botao-next" onclick="mudarSlide(this, 1)">&#10095;</button>
+                </div>
+                <p class="paragrafo-grande">Com meses de trabalho e dedicação, conseguimos no dia 9 de agosto de 2025 — um fim de semana emocionante de Dia dos Pais —, realizamos o sonho de inaugurar a nossa primeira loja física. Más do que abrir portas, abrimos um espaço para cultivar encontros. Com a nossa casa nova, o nosso catálogo também floresceu. Hoje, além das plantas e das flores de corte, você encontra balões personalizados, velas aromáticas, bento cakes, mimos em MDF e cestas cheias de afeto.</p>
+                <p class="paragrafo-grande">Ao longo dessa jornada, percebemos que o que vendemos não são produtos. Nós fazemos parte de sonhos. Tivemos a honra de estar presentes em casamentos, aniversários, surpresas românticas e nos gestos mais puros de carinho cotidianos. É um privilégio imenso entrar na sua casa através de um arranjo de mesa ou ajudar a planejar um pedido de "quer casar comigo?".</p>
+                <div class="carrossel-container" data-indice="0">
+                    <div class="carrossel-slides">
+                        <div class="slide"><img src="300.webp" alt="Imagem 1"></div>
+                        <div class="slide"><img src="301.webp" alt="Imagem 2"></div>
+                        <div class="slide"><img src="302.webp" alt="Imagem 3"></div>
+                        <div class="slide"><img src="303.webp" alt="Imagem 4"></div>
+                        <div class="slide"><img src="304.webp" alt="Imagem 5"></div>
+                        <div class="slide"><img src="305.webp" alt="Imagem 6"></div>
+                        <div class="slide"><img src="306.webp" alt="Imagem 7"></div>
+                    </div>
+                    <button class="botao-prev" onclick="mudarSlide(this, -1)">&#10094;</button>
+                    <button class="botao-next" onclick="mudarSlide(this, 1)">&#10095;</button>
+                </div>
+                <p class="paragrafo-grande">Acompanhamos os ciclos da vida desde o comecinho, celebrando a chegada de um recém-nascido e abraçando as novas mamães. Vibramos com as conquistas nas formaturas, nas inaugurações de escritórios e na conquista da casa nova. E, porque a vida também é feita de despedidas, nos fazemos presentes nos momentos de silêncio, oferecendo plantas para velório e buquês de consolo — porque acreditamos que o colo e o cuidado são ainda mais necessários nas horas difíceis. Nossa missão é e sempre será essa: traduzir em flores, aromas e detalhes aquilo que as palavras, às vezes, não conseguem dizer. Obrigado por nos deixar fazer parte da sua história.<br><br></p>
+                <div class="carrossel-container" data-indice="0">
+                    <div class="carrossel-slides">
+                        <div class="slide"><img src="307.webp" alt="Imagem 1"></div>
+                        <div class="slide"><img src="308.webp" alt="Imagem 2"></div>
+                        <div class="slide"><img src="309.webp" alt="Imagem 3"></div>
+                        <div class="slide"><img src="310.webp" alt="Imagem 4"></div>
+                        <div class="slide"><img src="311.webp" alt="Imagem 5"></div>
+                    </div>
+                    <button class="botao-prev" onclick="mudarSlide(this, -1)">&#10094;</button>
+                    <button class="botao-next" onclick="mudarSlide(this, 1)">&#10095;</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="cesta" class="page-section" aria-labelledby="cesta">
+        <div class="caixa-destaque">
+            <div id="cestasm"></div>
+        </div>
+    </section>
+
+    <section id="perso" class="page-section" aria-labelledby="perso">
+        <div class="caixa-destaque">
+            <article class="bloco-texto">
+                <h2>Avisos Importantes!</h2>
+                <p class="paragrafo-grande">Fique atento aos nossos avisos importantes sobre horários de funcionamento, eventos especiais e outras informações relevantes para nossos clientes. Acompanhe abaixo as últimas atualizações:</p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 - Rua Ermelinda Gianini Teixeira, - 17 Jardim Benoá - Santana de Parnaíba - CEP 06502-055. <a href="https://wa.me/c/5511955506889">Contato aqui!</a>.</p>
+</footer>
+
+<script>
+    const mobileMenuBtn = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+    mobileMenuBtn.addEventListener('click', () => {
+        const isOpened = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+        mobileMenuBtn.setAttribute('aria-expanded', !isOpened);
+        mobileMenuBtn.classList.toggle('active');
+        navList.classList.toggle('active');
+    });
+
+    function mudarPagina(idPagina) {
+        mobileMenuBtn.classList.remove('active');
+        navList.classList.remove('active');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+
+        const paginas = document.querySelectorAll('.page-section');
+        paginas.forEach(p => p.classList.remove('active'));
+
+        const botoes = document.querySelectorAll('.nav-links button');
+        botoes.forEach(b => b.classList.remove('active'));
+
+        if (idPagina === 'Buques') {
+            document.getElementById('Buques').classList.add('active');
+            botoes[0].classList.add('active');
+            document.getElementById('banner-titulo').innerText = "Nossos Buquês";
+        } else if (idPagina === 'Balao') {
+            document.getElementById('Balao').classList.add('active');
+            botoes[1].classList.add('active');
+            document.getElementById('banner-titulo').innerText = "Balões personalizados";
+        } else if (idPagina === 'cesta') {
+            document.getElementById('cesta').classList.add('active');
+            botoes[2].classList.add('active');
+            document.getElementById('banner-titulo').innerText = "Cestas Especiais";
+        } else if (idPagina === 'perso') {
+            document.getElementById('perso').classList.add('active');
+            botoes[3].classList.add('active');
+            document.getElementById('banner-titulo').innerText = "personalizados";
+        } else if (idPagina === 'Plantas/Flores') {
+            document.getElementById('Plantas/Flores').classList.add('active');
+            botoes[4].classList.add('active');
+            document.getElementById('banner-titulo').innerText = "Plantas/Flores";
+        } else if (idPagina === 'Vasos') {
+            document.getElementById('Vasos').classList.add('active');
+            botoes[5].classList.add('active');
+            document.getElementById('banner-titulo').innerText = "Vasos";
+        } else if (idPagina === 'info') {
+            document.getElementById('info').classList.add('active');
+            botoes[6].classList.add('active');
+            document.getElementById('banner-titulo').innerText = "Informações gerais";
+        } 
+
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    function mudarSlide(botao, direcao) {
+        const container = botao.closest('.carrossel-container');
+        const pistaSlides = container.querySelector('.carrossel-slides');
+        const slides = container.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        let indice = parseInt(container.getAttribute('data-indice') || '0');
+        indice += direcao;
+        
+        if (indice >= totalSlides) {
+            indice = 0; 
+        } else if (indice < 0) {
+            indice = totalSlides - 1; 
+        }
+        container.setAttribute('data-indice', indice);
+
+        const offset = -indice * 100;
+        pistaSlides.style.transform = `translateX(${offset}%)`;
+    }
+
+    function trocarExtensaoImagem(imagem) {
+        const caminho = imagem.getAttribute('src');
+        if (!caminho || !/\.webp$/i.test(caminho)) return;
+        if (!caminho.startsWith('Pétala Floricultura_files/')) {
+            imagem.src = `Pétala Floricultura_files/${caminho}`;
+        }
+    }
+
+    // Função para renderizar os produtos dinamicamente via JSON
+    function renderizarSecao(containerId, listaProdutos, ordenarPorPreco = false) {
+        const container = document.getElementById(containerId);
+        if (!container || !listaProdutos) return;
+
+        if (ordenarPorPreco) {
+            listaProdutos.sort((a, b) => {
+                if (a.preco === undefined && b.preco === undefined) return 0;
+                if (a.preco === undefined) return 1;
+                if (b.preco === undefined) return -1;
+                return a.preco - b.preco;
+            });
+        }
+
+        listaProdutos.forEach(produto => {
+            let slidesHtml = '';
+            if (produto.imagens && produto.imagens.length > 0) {
+                produto.imagens.forEach((img, index) => {
+                    slidesHtml += `<div class="slide"><img src="Pétala Floricultura_files/${img}" alt="${produto.titulo || 'Produto'} - Imagem ${index + 1}"></div>`;
+                });
+            } else {
+                slidesHtml = `<div class="slide"><div style="width: 100%; height: 300px; background-color: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999; font-size: 1.1em;">Espaço para imagem</div></div>`;
+            }
+
+            let precoHtml = '';
+            if (produto.preco !== undefined && produto.preco !== null) {
+                const precoFormatado = produto.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                precoHtml = `<div class="produto-card-preco"><span class="produto-card-preco-label">A partir de:</span><span>${precoFormatado}</span></div>`;
+            }
+
+            const mensagemWp = encodeURIComponent(`Olá, gostaria de encomendar o produto: ${produto.titulo || 'Produto'}`);
+            const linkWp = `https://wa.me/5511955506889?text=${mensagemWp}`;
+
+            const article = document.createElement('article');
+            const indiceProduto = document.querySelectorAll('.produto-card').length;
+            article.classList.add(
+                'produto-card',
+                indiceProduto % 2 === 0 ? 'produto-fundo-verde' : 'produto-fundo-branco'
+            );
+            article.innerHTML = `
+                <div class="carrossel-container" data-indice="0">
+                    <div class="carrossel-slides">
+                        ${slidesHtml}
+                    </div>
+                    <button class="botao-prev" onclick="mudarSlide(this, -1)">&#10094;</button>
+                    <button class="botao-next" onclick="mudarSlide(this, 1)">&#10095;</button>
+                </div>
+                <h3 class="produto-card-titulo">${produto.titulo || 'Produto'}</h3>
+                <p class="produto-card-descricao">${produto.descricao}</p>
+                <div class="produto-card-footer">
+                    ${precoHtml}
+                    <a href="${linkWp}" target="_blank" class="btn-whatsapp">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.18 3.03 14.69 2 12.04 2zM12.04 20.1c-1.42 0-2.81-.38-4.03-1.1l-.29-.17-3.05.8.81-2.97-.19-.31c-.81-1.31-1.23-2.84-1.23-4.39 0-4.58 3.73-8.31 8.31-8.31 2.22 0 4.31.86 5.88 2.43 1.57 1.57 2.43 3.66 2.43 5.88 0 4.58-3.73 8.31-8.31 8.31zm4.56-6.19c-.25-.13-1.47-.73-1.7-.82-.23-.09-.39-.13-.56.13-.17.25-.64.82-.79.99-.15.17-.31.19-.56.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.39-1.73-.15-.25-.02-.39.11-.52.11-.11.25-.31.38-.47.13-.17.17-.28.25-.47.08-.19.04-.36-.02-.5-.06-.13-.56-1.34-.77-1.84-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.45.06-.69.31-.24.25-.92.9-0.92 2.2 0 1.3 0.94 2.55 1.07 2.73.13.17 1.85 2.83 4.48 3.97.63.27 1.12.43 1.5.55.63.2 1.21.17 1.66.1.51-.08 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/></svg>
+                        Quero esse buquê
+                    </a>
+                </div>
+            `;
+            container.appendChild(article);
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        mudarPagina('Buques');
+        document.querySelectorAll('img[src$=".webp"]').forEach(trocarExtensaoImagem);
+
+        // Carrega os produtos do arquivo JSON
+        fetch('produtos.json')
+            .then(response => response.json())
+            .then(data => {
+                // Preenche as categorias correspondentes de buquês
+                if (data.buques) {
+                    renderizarSecao('lista-buques-noivas', data.buques.noivas);
+                    renderizarSecao('lista-mini-buques', data.buques.mini);
+                    renderizarSecao('lista-mais-vendidos', data.buques['mais-vendidos']);
+                    renderizarSecao('lista-buques-variados', data.buques.variados);
+                    renderizarSecao('lista-buques-artesanais', data.buques.artesanais);
+                    renderizarSecao('lista-arranjo-caixa', data.buques.caixa);
+                }
+
+                // Carrega e renderiza os balões
+                if (data.baloes) {
+                    renderizarSecao('lista-baloes', data.baloes);
+                }
+
+                // Carrega e renderiza as plantas
+                if (data.plantas) {
+                    renderizarSecao('lista-plantas', data.plantas);
+                }
+
+                // Carrega e renderiza os vasos
+                if (data.vasos) {
+                    renderizarSecao('lista-vasos', data.vasos);
+                }
+
+                // Carrega e ordena as cestas por preço automaticamente
+                renderizarSecao('cestasm', data.cestas, true);
+
+                // Carrega e renderiza os itens personalizados
+                if (data.personalizados) {
+                    renderizarSecao('lista-personalizados', data.personalizados, true);
+                }
+
+            })
+            .catch(error => console.error('Erro ao carregar o JSON de produtos:', error));
+    });
+</script>
+</body>
+</html>
