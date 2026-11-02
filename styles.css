@@ -632,6 +632,87 @@ img {
 }
 
 
+        /* Carrosséis de produtos que substituem os acordeões por categoria */
+        .categoria-carrossel {
+            max-width: 900px;
+        }
+
+        .categoria-carrossel > h2 {
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .categoria-carrossel-viewport {
+            position: relative;
+            overflow: hidden;
+            padding: 30px 48px;
+        }
+
+        .categoria-carrossel-track {
+            display: flex;
+            align-items: center;
+            transition: transform 0.45s ease;
+            will-change: transform;
+        }
+
+        .categoria-carrossel-track > .produto-card {
+            flex: 0 0 280px;
+            width: 280px;
+            margin: 0 12px 0;
+            opacity: 0.55;
+            transform: scale(0.86);
+            transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .categoria-carrossel-track > .produto-card.active-produto {
+            opacity: 1;
+            transform: scale(1);
+            z-index: 2;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .categoria-carrossel-track .produto-card .carrossel-container {
+            aspect-ratio: 1 / 1;
+        }
+
+        .categoria-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(38, 45, 40, 0.82);
+            color: #fff;
+            cursor: pointer;
+            z-index: 20;
+            font-size: 20px;
+            line-height: 44px;
+            text-align: center;
+        }
+
+        .categoria-nav:disabled {
+            opacity: 0.35;
+            cursor: default;
+        }
+
+        .categoria-prev { left: 4px; }
+        .categoria-next { right: 4px; }
+
+        @media (max-width: 576px) {
+            .categoria-carrossel-viewport {
+                padding: 24px 36px;
+            }
+
+            .categoria-carrossel-track > .produto-card {
+                flex-basis: min(240px, calc(100vw - 120px));
+                width: min(240px, calc(100vw - 120px));
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+        }
+
         /* modelo de elementos decorativos */
 
        .decorado {

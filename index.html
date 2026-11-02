@@ -7,24 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Responsividade para títulos e preços de produtos */
-        @media (max-width: 576px) {
-            .header-produto-mobile {
-                flex-direction: column;
-                align-items: flex-start !important;
-            }
-            .preco-mobile {
-                font-size: 1.1em !important;
-                margin-left: 0 !important;
-                margin-top: 8px;
-            }
-            .titulo-mobile h2 {
-                font-size: 1.2em;
-            }
-        }
-    </style>
+   <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="category-carousel.css?v=7">
+<script src="category-carousel.js?v=7" defer></script>
+</style>
 </head>
 <body>
     <nav class="navbar" aria-label="Navegação Principal">
@@ -57,48 +43,60 @@
     </div>
 
     <section id="Buques" class="page-section active">
-        <div class="caixa-destaque">
-            <details>
-                <summary>Buquês de noivas</summary>
-                <div id="lista-buques-noivas"></div>
-            </details>
-        </div>
-         
-        <div class="caixa-destaque">
-            <details>
-                <summary>Mini Buquês</summary>
-                <div id="lista-mini-buques"></div>
-            </details>
-        </div>
-
-        <div class="caixa-destaque">
-            <details>
-                <summary>Mais vendidos</summary>
-                <div id="lista-mais-vendidos"></div>
-            </details>
-        </div>
-
-        <div class="caixa-destaque">
-            <details>
-                <summary>Buquês Variados</summary>
-                <div id="lista-buques-variados"></div>
-            </details>
-        </div>
-
-        <div class="caixa-destaque">
-            <details>
-                <summary>Buquês Artesanais</summary>
-                <div id="lista-buques-artesanais"></div>
-            </details>
-        </div>
-
-        <div class="caixa-destaque">
-            <details>
-                <summary>Arranjo na caixa</summary>
-                <div id="lista-arranjo-caixa"></div>
-            </details>
+    <section class="categoria-carrossel caixa-destaque">
+        <h2>Buquês de noivas</h2>
+        <div class="categoria-carrossel-viewport">
+            <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
+            <div class="categoria-carrossel-track" id="lista-buques-noivas"></div>
+            <button class="categoria-nav categoria-next" type="button" aria-label="Próximos produtos">&#10095;</button>
         </div>
     </section>
+
+    <section class="categoria-carrossel caixa-destaque">
+        <h2>Mini Buquês</h2>
+        <div class="categoria-carrossel-viewport">
+            <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
+            <div class="categoria-carrossel-track" id="lista-mini-buques"></div>
+            <button class="categoria-nav categoria-next" type="button" aria-label="Próximos produtos">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="categoria-carrossel caixa-destaque">
+        <h2>Mais vendidos</h2>
+        <div class="categoria-carrossel-viewport">
+            <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
+            <div class="categoria-carrossel-track" id="lista-mais-vendidos"></div>
+            <button class="categoria-nav categoria-next" type="button" aria-label="Próximos produtos">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="categoria-carrossel caixa-destaque">
+        <h2>Buquês Variados</h2>
+        <div class="categoria-carrossel-viewport">
+            <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
+            <div class="categoria-carrossel-track" id="lista-buques-variados"></div>
+            <button class="categoria-nav categoria-next" type="button" aria-label="Próximos produtos">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="categoria-carrossel caixa-destaque">
+        <h2>Buquês Artesanais</h2>
+        <div class="categoria-carrossel-viewport">
+            <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
+            <div class="categoria-carrossel-track" id="lista-buques-artesanais"></div>
+            <button class="categoria-nav categoria-next" type="button" aria-label="Próximos produtos">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="categoria-carrossel caixa-destaque">
+        <h2>Arranjo na caixa</h2>
+        <div class="categoria-carrossel-viewport">
+            <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
+            <div class="categoria-carrossel-track" id="lista-arranjo-caixa"></div>
+            <button class="categoria-nav categoria-next" type="button" aria-label="Próximos produtos">&#10095;</button>
+        </div>
+    </section>
+</section>
 
     <section id="Balao" class="page-section" aria-labelledby="Balao">
         <div class="caixa-destaque">
@@ -123,14 +121,14 @@
             <article class="bloco-texto">
                 <h2>Horário de Funcionamento</h2>
                 <p class="paragrafo-grande">
-                                            Sábado	9h às 15h<br>
+                                            
                                             Domingo	Fechado<br>
                                             Segunda-feira	9h às 17h<br>
                                             Terça-feira	9h às 17h<br>
                                             Quarta-feira	9h às 17h<br>
                                             Quinta-feira	9h às 17h<br>
                                             Sexta-feira	9h às 17h<br>
-
+                                            Sábado	9h às 15h<br>
                 </p>
                 <p class="paragrafo-grande">
                     <h2>
@@ -392,7 +390,90 @@
     }
 
     // Função para renderizar os produtos dinamicamente via JSON
-    function renderizarSecao(containerId, listaProdutos, ordenarPorPreco = true) {
+   function abrirDetalhesProduto(produto) {
+    const preco = typeof produto.preco === 'number'
+        ? produto.preco.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        })
+        : 'Sob consulta';
+
+    const imagens = produto.imagens?.length
+        ? produto.imagens.map(resolverImagemProduto)
+        : [];
+
+    const mensagem = encodeURIComponent(
+        `Olá, gostaria de encomendar o produto: ${produto.titulo || 'Produto'}`
+    );
+
+    let dialog = document.getElementById('produto-detalhes-dialog');
+
+    if (!dialog) {
+        dialog = document.createElement('dialog');
+        dialog.id = 'produto-detalhes-dialog';
+        dialog.className = 'produto-detalhes-dialog';
+        document.body.appendChild(dialog);
+    }
+
+    const miniaturas = imagens.map((imagem, index) => `
+        <button type="button"
+            class="produto-miniatura ${index === 0 ? 'active' : ''}"
+            data-imagem="${imagem}"
+            aria-label="Ver imagem ${index + 1}">
+            <img src="${imagem}" alt="">
+        </button>
+    `).join('');
+
+    dialog.innerHTML = `
+        <button class="produto-detalhes-fechar" type="button"
+            aria-label="Fechar detalhes">&times;</button>
+
+        <div class="produto-detalhes-grid">
+            <div class="produto-detalhes-imagem">
+                <img class="produto-detalhes-foto"
+                    src="${imagens[0] || ''}"
+                    alt="${produto.titulo || 'Produto'}">
+
+                <div class="produto-detalhes-miniaturas">${miniaturas}</div>
+            </div>
+
+            <div class="produto-detalhes-conteudo">
+                <p class="produto-detalhes-kicker">Coleção Pétala</p>
+                <h2>${produto.titulo || 'Produto'}</h2>
+                <p class="produto-detalhes-descricao">
+                    ${produto.descricao || ''}
+                </p>
+                <strong class="produto-detalhes-preco">${preco}</strong>
+
+                <a class="produto-detalhes-whatsapp"
+                    href="https://wa.me/5511955506889?text=${mensagem}"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+    `;
+
+    dialog.querySelector('.produto-detalhes-fechar')
+        .addEventListener('click', () => dialog.close());
+
+    dialog.querySelectorAll('.produto-miniatura').forEach(botao => {
+        botao.addEventListener('click', () => {
+            dialog.querySelector('.produto-detalhes-foto').src =
+                botao.dataset.imagem;
+
+            dialog.querySelectorAll('.produto-miniatura')
+                .forEach(item => item.classList.remove('active'));
+
+            botao.classList.add('active');
+        });
+    });
+
+    dialog.showModal();
+}
+
+function renderizarSecao(containerId, listaProdutos, ordenarPorPreco = true) {
         const container = document.getElementById(containerId);
         if (!container || !listaProdutos) return;
 
@@ -453,6 +534,13 @@
                 </div>
             `;
             container.appendChild(article);
+            article.addEventListener('click', event => {
+    if (event.target.closest('a, button')) return;
+    abrirDetalhesProduto(produto);
+});
+
+article.tabIndex = 0;
+article.setAttribute('role', 'button');
         });
     }
 
