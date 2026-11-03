@@ -1,9 +1,40 @@
-.categoria-carrossel { max-width: 900px; }
-.categoria-carrossel > h2 { margin-bottom: 24px; text-align: center; font-family: 'Cormorant Garamond', Georgia, serif; }
+.categoria-carrossel {
+    width: min(94vw, 1120px);
+    max-width: 1120px;
+    margin: 3.5rem auto;
+    padding: 3rem 0 2rem;
+    border-top: 1px solid rgba(38, 51, 43, 0.08);
+    border-bottom: 1px solid rgba(38, 51, 43, 0.08);
+    overflow: hidden;
+}
+.categoria-carrossel > h2 {
+    position: relative;
+    margin: 0 48px 24px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1;
+    color: #26332b;
+}
+.categoria-carrossel > h2::before,
+.categoria-carrossel > h2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: clamp(34px, 7vw, 76px);
+    height: 1px;
+    background: rgba(181, 108, 120, 0.48);
+}
+.categoria-carrossel > h2::before {
+    left: 4%;
+}
+.categoria-carrossel > h2::after {
+    right: 4%;
+}
 .categoria-carrossel-viewport { position: relative; overflow: hidden; padding: 30px 48px; }
 .categoria-carrossel-track { display: flex; align-items: center; transition: transform 0.45s ease; will-change: transform; }
 .categoria-carrossel-track > .produto-card {
-    flex: 0 0 280px; width: 280px; min-height: 520px; margin: 0 12px;
+    flex: 0 0 280px; width: 280px; min-height: 450px; margin: 0 12px;
     padding: 0; border: 1px solid rgba(38,51,43,.08); border-radius: 0;
     background: #fff; opacity: .55; transform: scale(.86);
     display: flex; flex-direction: column;
@@ -19,13 +50,13 @@
 }
 .categoria-carrossel-track .produto-card-titulo {
     font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px;
-    line-height: 1; margin: 20px 20px 10px; text-transform: none;
+    line-height: 1; margin: 16px 20px 8px; text-transform: none;
 }
 .categoria-carrossel-track .produto-card-descricao {
-    color: #718077; font-size: 13px; line-height: 1.6; margin: 0 20px 22px;
+    display: none !important;
 }
 .categoria-carrossel-track .produto-card-footer {
-    align-items: end; border-top: 0; margin: auto 20px 20px;
+    align-items: end; border-top: 0; margin: 10px 20px 16px;
     padding-top: 0; flex-wrap: nowrap;
 }
 .categoria-carrossel-track .produto-card-preco { font-size: 14px; color: #6d8571; }
@@ -46,8 +77,10 @@
     inset: 0;
     margin: auto;
     max-height: calc(100vh - 32px);
+    max-width: calc(100vw - 16px);
     overflow: hidden;
     width: min(820px, calc(100vw - 32px));
+    box-sizing: border-box;
     border: 1px solid rgba(38, 51, 43, 0.08);
     border-radius: 0;
     padding: 0;
@@ -63,6 +96,7 @@
 .produto-detalhes-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr);
+    width: 100%;
 }
 
 .produto-detalhes-imagem {
@@ -171,24 +205,47 @@
 
 @media (max-width: 650px) {
     .produto-detalhes-dialog {
-    max-height: calc(100vh - 24px);
-    overflow-y: auto;
-}
+        position: fixed;
+        inset: 8px;
+        width: calc(100vw - 16px);
+        max-width: calc(100vw - 16px);
+        max-height: calc(100vh - 16px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        box-sizing: border-box;
+        margin: 0;
+    }
     .produto-detalhes-grid {
         grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
     }
 
     .produto-detalhes-imagem {
         min-height: 300px;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
     }
 
     .produto-detalhes-conteudo {
         min-height: 300px;
         padding: 26px 24px 24px;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .produto-detalhes-conteudo h2 {
         font-size: 34px;
+    }
+
+    .produto-detalhes-descricao {
+        width: 100%;
+        max-width: 100%;
+        overflow-wrap: anywhere;
     }
 }
 .categoria-carrossel-track .btn-whatsapp:hover {
@@ -213,7 +270,7 @@
     .categoria-carrossel-viewport { padding: 24px 36px; }
     .categoria-carrossel-track > .produto-card {
         flex-basis: min(240px, calc(100vw - 120px)); width: min(240px, calc(100vw - 120px));
-        min-height: 440px; margin-left: 8px; margin-right: 8px;
+        min-height: 360px; margin-left: 8px; margin-right: 8px;
     }
 }
 html,
@@ -253,8 +310,15 @@ body {
 
 @media (max-width: 650px) {
     .produto-detalhes-dialog {
+        position: fixed;
+        inset: 8px;
         max-height: calc(100vh - 24px);
         overflow-y: auto;
+        overflow-x: hidden;
+        width: calc(100vw - 16px);
+        max-width: calc(100vw - 16px);
+        margin: 0;
+        box-sizing: border-box;
     }
 
     .categoria-carrossel .categoria-carrossel-viewport {

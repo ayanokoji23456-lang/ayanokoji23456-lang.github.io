@@ -6,10 +6,10 @@
     <title>Pétala Floricultura</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Open+Sans:wght@300;400;600;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="category-carousel.css?v=7">
-<script src="category-carousel.js?v=7" defer></script>
+<link rel="stylesheet" href="category-carousel.css?v=11">
+<script src="category-carousel.js?v=11" defer></script>
 </style>
 </head>
 <body>
@@ -31,19 +31,21 @@
         <!-- <li><a class="nav-page-link" href="assinaturas/index.html">Assinatura floral</a></li> -->
         </ul>
     </nav>
+<div class="aviso-precos" role="note">
+    <span aria-hidden="true">⚠️</span>
+    <p><strong>Atenção:</strong> Os preços podem variar. Consulte os valores atualizados antes de confirmar seu pedido.</p>
+</div>
 <header class="banner">
-    <h1 id="banner-titulo">Nossos Buquês</h1>
+    <div class="banner-content">
+        <span class="banner-eyebrow">Pétala Floricultura</span>
+        <h1 id="banner-titulo">Nossos Buquês</h1>
+        <p id="banner-subtitulo">Flores escolhidas com carinho para todos os momentos</p>
+    </div>
 </header>
 
 <main class="decorado2">
-    <div class="caixa-destaque" style="margin-top: 20px; text-align: center;">
-        <p class="paragrafo-grande" style="font-weight: 600; color: #d9534f; margin: 0;">
-            ⚠️ <strong>Atenção:</strong> Os preços exibidos no site podem sofrer variações sem aviso prévio. Consulte os valores atualizados e a disponibilidade ao confirmar seu pedido.
-        </p>
-    </div>
-
     <section id="Buques" class="page-section active">
-    <section class="categoria-carrossel caixa-destaque">
+    <section class="categoria-carrossel">
         <h2>Buquês de noivas</h2>
         <div class="categoria-carrossel-viewport">
             <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
@@ -52,7 +54,7 @@
         </div>
     </section>
 
-    <section class="categoria-carrossel caixa-destaque">
+    <section class="categoria-carrossel">
         <h2>Mini Buquês</h2>
         <div class="categoria-carrossel-viewport">
             <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
@@ -61,7 +63,7 @@
         </div>
     </section>
 
-    <section class="categoria-carrossel caixa-destaque">
+    <section class="categoria-carrossel">
         <h2>Mais vendidos</h2>
         <div class="categoria-carrossel-viewport">
             <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
@@ -70,7 +72,7 @@
         </div>
     </section>
 
-    <section class="categoria-carrossel caixa-destaque">
+    <section class="categoria-carrossel">
         <h2>Buquês Variados</h2>
         <div class="categoria-carrossel-viewport">
             <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
@@ -79,7 +81,7 @@
         </div>
     </section>
 
-    <section class="categoria-carrossel caixa-destaque">
+    <section class="categoria-carrossel">
         <h2>Buquês Artesanais</h2>
         <div class="categoria-carrossel-viewport">
             <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
@@ -88,7 +90,7 @@
         </div>
     </section>
 
-    <section class="categoria-carrossel caixa-destaque">
+    <section class="categoria-carrossel">
         <h2>Arranjo na caixa</h2>
         <div class="categoria-carrossel-viewport">
             <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
@@ -99,21 +101,36 @@
 </section>
 
     <section id="Balao" class="page-section" aria-labelledby="Balao">
-        <div class="caixa-destaque">
-            <div id="lista-baloes"></div>
-        </div>
+        <section class="categoria-carrossel">
+            <h2>Balões personalizados</h2>
+            <div class="categoria-carrossel-viewport">
+                <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
+                <div class="categoria-carrossel-track" id="lista-baloes"></div>
+                <button class="categoria-nav categoria-next" type="button" aria-label="Próximos produtos">&#10095;</button>
+            </div>
+        </section>
     </section>
 
     <section id="Plantas/Flores" class="page-section" aria-labelledby="Plantas/Flores">
-        <div class="caixa-destaque">
-            <div id="lista-plantas"></div>
-        </div>
+        <section class="categoria-carrossel">
+            <h2>Plantas e flores</h2>
+            <div class="categoria-carrossel-viewport">
+                <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
+                <div class="categoria-carrossel-track" id="lista-plantas"></div>
+                <button class="categoria-nav categoria-next" type="button" aria-label="Próximos produtos">&#10095;</button>
+            </div>
+        </section>
     </section>
         
     <section id="Vasos" class="page-section" aria-labelledby="Vasos">
-        <div class="caixa-destaque">
-            <div id="lista-vasos"></div>
-        </div>
+        <section class="categoria-carrossel">
+            <h2>Variados</h2>
+            <div class="categoria-carrossel-viewport">
+                <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
+                <div class="categoria-carrossel-track" id="lista-vasos"></div>
+                <button class="categoria-nav categoria-next" type="button" aria-label="Próximos produtos">&#10095;</button>
+            </div>
+        </section>
     </section>
 
     <section id="info" class="page-section" aria-labelledby="info">
@@ -244,24 +261,27 @@
     </section>
 
     <section id="cesta" class="page-section" aria-labelledby="cesta">
-        <div class="caixa-destaque">
-            <div id="cestasm"></div>
-        </div>
+        <section class="categoria-carrossel">
+            <h2>Cestas especiais</h2>
+            <div class="categoria-carrossel-viewport">
+                <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
+                <div class="categoria-carrossel-track" id="cestasm"></div>
+                <button class="categoria-nav categoria-next" type="button" aria-label="Próximos produtos">&#10095;</button>
+            </div>
+        </section>
     </section>
 
     <section id="perso" class="page-section" aria-labelledby="perso">
-        <div class="caixa-destaque">
-            <article class="bloco-texto">
-            </article>
-            <div id="lista-personalizados"></div>
-        </div>
+        <section class="categoria-carrossel">
+            <h2>Personalizados</h2>
+            <div class="categoria-carrossel-viewport">
+                <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
+                <div class="categoria-carrossel-track" id="lista-personalizados"></div>
+                <button class="categoria-nav categoria-next" type="button" aria-label="Próximos produtos">&#10095;</button>
+            </div>
+        </section>
     </section>
 
-    <div class="caixa-destaque" style="margin-bottom: 20px; text-align: center;">
-        <p class="paragrafo-grande" style="font-weight: 600; color: #d9534f; margin: 0;">
-            ⚠️ <strong>Atenção:</strong> Os preços exibidos no site podem sofrer variações sem aviso prévio. Consulte os valores atualizados e a disponibilidade ao confirmar seu pedido.
-        </p>
-    </div>
 </main>
 
 <footer>
@@ -288,35 +308,43 @@
 
         const botoes = document.querySelectorAll('.nav-links button');
         botoes.forEach(b => b.classList.remove('active'));
+        const bannerSubtitulo = document.getElementById('banner-subtitulo');
 
         if (idPagina === 'Buques') {
             document.getElementById('Buques').classList.add('active');
             botoes[0].classList.add('active');
             document.getElementById('banner-titulo').innerText = "Nossos Buquês";
+            bannerSubtitulo.innerText = "Flores escolhidas com carinho para todos os momentos";
         } else if (idPagina === 'Balao') {
             document.getElementById('Balao').classList.add('active');
             botoes[1].classList.add('active');
             document.getElementById('banner-titulo').innerText = "Balões personalizados";
+            bannerSubtitulo.innerText = "Alegria em cada detalhe da sua celebração";
         } else if (idPagina === 'cesta') {
             document.getElementById('cesta').classList.add('active');
             botoes[2].classList.add('active');
             document.getElementById('banner-titulo').innerText = "Cestas Especiais";
+            bannerSubtitulo.innerText = "Presentes delicados para transformar gestos em lembranças";
         } else if (idPagina === 'perso') {
             document.getElementById('perso').classList.add('active');
             botoes[3].classList.add('active');
             document.getElementById('banner-titulo').innerText = "personalizados";
+            bannerSubtitulo.innerText = "Criações exclusivas para contar a sua história";
         } else if (idPagina === 'Plantas/Flores') {
             document.getElementById('Plantas/Flores').classList.add('active');
             botoes[4].classList.add('active');
             document.getElementById('banner-titulo').innerText = "Plantas/Flores";
+            bannerSubtitulo.innerText = "Natureza viva para cultivar dentro e fora de casa";
         } else if (idPagina === 'Vasos') {
             document.getElementById('Vasos').classList.add('active');
             botoes[5].classList.add('active');
             document.getElementById('banner-titulo').innerText = "Variados";
+            bannerSubtitulo.innerText = "Peças especiais para deixar o seu ambiente mais bonito";
         } else if (idPagina === 'info') {
             document.getElementById('info').classList.add('active');
             botoes[6].classList.add('active');
             document.getElementById('banner-titulo').innerText = "Informações gerais";
+            bannerSubtitulo.innerText = "Horários, entregas, encomendas e como nos encontrar";
         } 
 
         window.scrollTo({top: 0, behavior: 'smooth'});
@@ -420,7 +448,10 @@
             class="produto-miniatura ${index === 0 ? 'active' : ''}"
             data-imagem="${imagem}"
             aria-label="Ver imagem ${index + 1}">
-            <img src="${imagem}" alt="">
+            <img src="${imagem}"
+                data-caminho-alternativo="${imagem}"
+                onerror="tentarImagemAlternativa(this)"
+                alt="">
         </button>
     `).join('');
 
@@ -432,6 +463,8 @@
             <div class="produto-detalhes-imagem">
                 <img class="produto-detalhes-foto"
                     src="${imagens[0] || ''}"
+                    data-caminho-alternativo="${imagens[0] || ''}"
+                    onerror="tentarImagemAlternativa(this)"
                     alt="${produto.titulo || 'Produto'}">
 
                 <div class="produto-detalhes-miniaturas">${miniaturas}</div>
@@ -460,8 +493,11 @@
 
     dialog.querySelectorAll('.produto-miniatura').forEach(botao => {
         botao.addEventListener('click', () => {
-            dialog.querySelector('.produto-detalhes-foto').src =
-                botao.dataset.imagem;
+            const foto = dialog.querySelector('.produto-detalhes-foto');
+            foto.dataset.tentativa = '0';
+            foto.dataset.caminhoAlternativo = botao.dataset.imagem;
+            foto.src = botao.dataset.imagem;
+            foto.onerror = () => tentarImagemAlternativa(foto);
 
             dialog.querySelectorAll('.produto-miniatura')
                 .forEach(item => item.classList.remove('active'));
