@@ -342,6 +342,132 @@
         pistaSlides.style.transform = `translateX(${offset}%)`;
     }
 
+    function removerAcentos(texto = '') {
+        return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
+
+    function gerarVariantesCaminho(caminho) {
+        if (!caminho) return [];
+
+        const limpa = caminho
+            .replace(/\\/g, '/')
+            .replace(/^\/+/, '')
+            .replace(/^(\.\.\/)+/, '')
+            .replace(/^(\.\/)+/, '')
+            .replace(/^Pétala Floricultura_files\//i, '')
+            .replace(/^floricultura files\//i, '');
+
+        if (!limpa) return [];
+
+        const candidatos = new Set();
+        const adicionar = valor => {
+            if (!valor) return;
+            const texto = valor.trim().replace(/^\/+/, '');
+            if (texto) candidatos.add(texto);
+        };
+
+        const semAcentos = removerAcentos(limpa);
+        const nomes = [
+            limpa,
+            limpa.toLowerCase(),
+            semAcentos,
+            semAcentos.toLowerCase(),
+            limpa.replace(/\s+/g, ' '),
+            removerAcentos(limpa.replace(/\s+/g, ' '))
+        ];
+
+        nomes.forEach(adicionar);
+
+        const partes = limpa.split('/').filter(Boolean);
+        if (partes.length > 0) {
+            const nomeArquivo = partes[partes.length - 1];
+            const pasta = partes.slice(0, -1).join('/');
+
+            const variantesNome = [
+                nomeArquivo,
+                nomeArquivo.toLowerCase(),
+                removerAcentos(nomeArquivo),
+                removerAcentos(nomeArquivo).toLowerCase()
+            ];
+
+            variantesNome.forEach(nome => {
+                adicionar(`${pasta}/${nome}`);
+                if (!pasta) {
+                    adicionar(`floricultura files/${nome}`);
+                    adicionar(`Pétala Floricultura_files/${nome}`);
+                }
+            });
+
+            if (/^mini|^minic/i.test(nomeArquivo)) {
+                ['mini0.webp', 'mini1.webp', 'minic2.webp', 'minic.webp'].forEach(nome => {
+                    adicionar(nome);
+                    adicionar(`floricultura files/${nome}`);
+                    adicionar(`Pétala Floricultura_files/${nome}`);
+                });
+            }
+        }
+
+        if (partes.length > 1) {
+            const nomeArquivo = partes[partes.length - 1];
+            adicionar(`floricultura files/${nomeArquivo}`);
+            adicionar(`Pétala Floricultura_files/${nomeArquivo}`);
+        }
+
+        if (partes.length === 1) {
+            const nomeArquivo = partes[0];
+            adicionar(`floricultura files/${nomeArquivo}`);
+            adicionar(`Pétala Floricultura_files/${nomeArquivo}`);
+
+            const base = nomeArquivo.replace(/\.[^.]+$/, '');
+            const extensao = nomeArquivo.match(/\.[^.]+$/)?.[0] || '';
+            ['png', 'jpg', 'jpeg', 'webp'].forEach(ext => {
+                if (ext !== extensao.toLowerCase()) {
+                    adicionar(`${base}.${ext}`);
+                    adicionar(`floricultura files/${base}.${ext}`);
+                }
+            });
+        }
+
+        return Array.from(candidatos);
+    }
+
+    function pontuarCaminho(valor) {
+        if (!valor) return -Infinity;
+
+        const nomeArquivo = valor.split('/').pop();
+        let score = 0;
+
+        if (!/^floricultura files\//i.test(valor) && !/^Pétala Floricultura_files\//i.test(valor)) score += 10;
+        if (valor === valor.toLowerCase()) score += 8;
+        if (/[à-ü]/i.test(valor)) score += 10;
+        if (valor === removerAcentos(valor).toLowerCase()) score += 4;
+        if (/[A-ZÀ-Ú]/.test(valor)) score -= 4;
+        if (/^floricultura files\//i.test(valor) && (/^mini\d*\.webp$/i.test(nomeArquivo) || /^minic\d*\.webp$/i.test(nomeArquivo) || /^img-.*\.webp$/i.test(nomeArquivo))) score += 30;
+        if (/^mini\d*\.webp$/i.test(nomeArquivo)) score += 25;
+        if (/^minic\d*\.webp$/i.test(nomeArquivo)) score += 8;
+        if (/^minic\.webp$/i.test(nomeArquivo)) score -= 6;
+        if (/^b\d+\.webp$/i.test(nomeArquivo)) score += 18;
+        if (/^img-.*\.webp$/i.test(nomeArquivo)) score += 10;
+
+        return score;
+    }
+
+    function resolverImagemProduto(caminho) {
+        if (!caminho) return '';
+        if (/^(data:|https?:|blob:)/i.test(caminho)) return caminho;
+
+        const candidatos = gerarVariantesCaminho(caminho);
+        if (!candidatos.length) {
+            return caminho.replace(/^\/+/, '').replace(/^(\.\.\/)+/, '');
+        }
+
+        const preferido = candidatos
+            .map(valor => ({ valor, score: pontuarCaminho(valor) }))
+            .sort((a, b) => b.score - a.score)[0]?.valor || candidatos[0];
+
+        return preferido;
+    }
+
     function trocarExtensaoImagem(imagem) {
         const caminho = imagem.getAttribute('src');
         if (!caminho || !/\.webp$/i.test(caminho)) return;
@@ -350,33 +476,26 @@
         imagem.onerror = () => tentarImagemAlternativa(imagem);
     }
 
-    function resolverImagemProduto(caminho) {
-        if (!caminho) return '';
-        if (/^(data:|https?:|blob:|\/)/i.test(caminho) || caminho.startsWith('../')) {
-            return caminho.replace(/^(\.\.\/)+/, '');
-        }
-        const limpo = caminho.replace(/^Pétala Floricultura_files\//, '');
-        if (!limpo.includes('/') && !limpo.startsWith('uploads/')) return `floricultura files/${limpo}`;
-        return limpo;
-    }
-
     function tentarImagemAlternativa(imagem) {
         const caminho = imagem.dataset.caminhoAlternativo || imagem.getAttribute('src');
-        const limpo = caminho.replace(/^(\.\.\/)+/, '').replace(/^Pétala Floricultura_files\//, '');
-        const tentativas = [limpo];
-        if (!limpo.includes('/')) tentativas.push(`floricultura files/${limpo}`);
-        if (/\.webp$/i.test(limpo)) {
-            const base = limpo.replace(/\.webp$/i, '');
-            tentativas.push(`${base}.png`, `${base}.jpg`, `${base}.jpeg`);
-            if (!limpo.includes('/')) tentativas.push(`floricultura files/${base}.png`, `floricultura files/${base}.jpg`, `floricultura files/${base}.jpeg`);
+        const tentativas = gerarVariantesCaminho(caminho)
+            .map(valor => ({ valor, score: pontuarCaminho(valor) }))
+            .sort((a, b) => b.score - a.score)
+            .map(item => item.valor);
+
+        if (!tentativas.length) {
+            marcarImagemIndisponivel(imagem);
+            return;
         }
-        tentativas.push(`Pétala Floricultura_files/${limpo}`);
+
         const tentativaAtual = Number(imagem.dataset.tentativa || '0');
         if (tentativaAtual >= tentativas.length) {
             marcarImagemIndisponivel(imagem);
             return;
         }
+
         imagem.dataset.tentativa = String(tentativaAtual + 1);
+        imagem.dataset.caminhoAlternativo = caminho;
         imagem.src = tentativas[tentativaAtual];
         imagem.onerror = () => tentarImagemAlternativa(imagem);
     }
