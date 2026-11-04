@@ -18,7 +18,7 @@ function ensureCategoryPath(path) {
     });
     return value;
 }
-function normalizeCategoryName(value) { return value.trim().replace(/[.\\/]+/g, '-').replace(/\s+/g, ' '); }
+function normalizeCategoryName(value) { return String(value || '').trim().replace(/[.\\/]+/g, '-').replace(/\s+/g, ' '); }
 function productCollections(value = catalog, path = []) {
     if (!value || typeof value !== 'object') return [];
     if (Array.isArray(value)) {
@@ -176,7 +176,7 @@ function setup() {
     const download = document.createElement('button'); download.className = 'button button-primary'; download.textContent = 'Baixar JSON'; download.type = 'button'; download.addEventListener('click', downloadCatalog); $('.intro-row').append(download);
     const importLabel = document.createElement('label'); importLabel.className = 'button button-quiet'; importLabel.textContent = 'Importar JSON'; const importInput = document.createElement('input'); importInput.type = 'file'; importInput.accept = '.json,application/json'; importInput.hidden = true; importInput.addEventListener('change', () => importCatalog(importInput.files[0])); importLabel.append(importInput); $('.intro-row').append(importLabel);
     if (BACKEND_MODE) {
-        const publish = document.createElement('button'); publish.className = 'button button-primary'; publish.textContent = 'Publicar agora'; publish.type = 'button'; publish.addEventListener('click', async () => { publish.disabled = true; const response = await fetch('/api/publish', { method: 'POST' }); const result = await response.json(); publish.disabled = false; showStatus(result.message || (result.ok ? 'Publicação concluída.' : 'Falha na publicação.')); }); $('.intro-row').append(publish);
+        const publish = document.createElement('button'); publish.className = 'button button-primary'; publish.textContent = 'Publicar agora'; publish.type = 'button'; publish.addEventListener('click', async () => { publish.disabled = true; try { const response = await fetch('/api/publish', { method: 'POST' }); const result = await response.json().catch(() => ({})); showStatus(String(result?.message || (result?.ok ? 'Publicação concluída.' : 'Falha na publicação.'))); } catch (error) { showStatus(`Falha ao publicar: ${String(error?.message || error || 'erro desconhecido')}`); } finally { publish.disabled = false; } }); $('.intro-row').append(publish);
         const convertExisting = document.createElement('button'); convertExisting.className = 'button button-quiet'; convertExisting.textContent = 'Converter imagens existentes'; convertExisting.type = 'button'; convertExisting.addEventListener('click', async () => { if (!window.confirm('Converter todas as imagens JPEG, PNG e GIF atuais para WebP?')) return; convertExisting.disabled = true; const response = await fetch('/api/convert-images', { method: 'POST' }); const result = await response.json(); convertExisting.disabled = false; await loadCatalog(); render(); showStatus(result.message || result.error || 'Conversão concluída.'); }); $('.intro-row').append(convertExisting);
     }
 }

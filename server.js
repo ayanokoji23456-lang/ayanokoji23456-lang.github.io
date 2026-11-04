@@ -50,17 +50,20 @@ async function publishChanges() {
     if (process.env.AUTO_PUBLISH === '0') return { ok: false, skipped: true, message: 'Publicação automática desativada.' };
     try {
         await execGit('git', ['add', 'produtos.json', 'floricultura files'], { cwd: ROOT });
-        try { await execGit('git', ['diff', '--cached', '--quiet'], { cwd: ROOT }); } catch { /* há alterações preparadas */ }
         const staged = await execGit('git', ['diff', '--cached', '--name-only'], { cwd: ROOT });
-        if (!staged.stdout.trim()) return { ok: true, message: 'Nenhuma alteração para publicar.' };
+        const stagedFiles = String(staged?.stdout || '').trim();
+        if (!stagedFiles) return { ok: true, message: 'Nenhuma alteração para publicar.' };
         try { await execGit('git', ['commit', '-m', 'Atualiza catálogo pelo painel'], { cwd: ROOT }); }
-        catch (error) { if (!/nothing to commit/i.test(error.stderr || error.stdout || '')) throw error; }
+        catch (error) {
+            const gitOutput = String(error?.stderr || error?.stdout || error?.message || '');
+            if (!/nothing to commit/i.test(gitOutput)) throw error;
+        }
         await execGit('git', ['push', 'origin', 'main'], { cwd: ROOT });
         try { await execGit('git', ['push', 'githubio', 'main:main'], { cwd: ROOT }); }
-        catch (error) { return { ok: false, message: `Catálogo salvo e enviado ao repositório principal, mas o site externo recusou: ${error.stderr || error.message}` }; }
+        catch (error) { return { ok: false, message: `Catálogo salvo e enviado ao repositório principal, mas o site externo recusou: ${String(error?.stderr || error?.stdout || error?.message || 'erro desconhecido')}` }; }
         return { ok: true, message: 'Catálogo publicado nos dois repositórios.' };
     } catch (error) {
-        return { ok: false, message: `Catálogo salvo, mas não pôde ser publicado: ${error.stderr || error.message}` };
+        return { ok: false, message: `Catálogo salvo, mas não pôde ser publicado: ${String(error?.stderr || error?.stdout || error?.message || 'erro desconhecido')}` };
     }
 }
 async function writeCatalog(catalog) {
