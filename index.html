@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Open+Sans:wght@300;400;600;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="category-carousel.css?v=11">
-<script src="category-carousel.js?v=11" defer></script>
+<link rel="stylesheet" href="category-carousel.css?v=12">
+<script src="category-carousel.js?v=12" defer></script>
 </style>
 </head>
 <body>
@@ -50,15 +50,6 @@
         <div class="categoria-carrossel-viewport">
             <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
             <div class="categoria-carrossel-track" id="lista-buques-noivas"></div>
-            <button class="categoria-nav categoria-next" type="button" aria-label="Próximos produtos">&#10095;</button>
-        </div>
-    </section>
-
-    <section class="categoria-carrossel">
-        <h2>Buquês de rosas</h2>
-        <div class="categoria-carrossel-viewport">
-            <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
-            <div class="categoria-carrossel-track" id="lista-buques-rosas"></div>
             <button class="categoria-nav categoria-next" type="button" aria-label="Próximos produtos">&#10095;</button>
         </div>
     </section>
@@ -606,7 +597,6 @@ article.setAttribute('role', 'button');
                 // Preenche as categorias correspondentes de buquês
                 if (data.buques) {
                     renderizarSecao('lista-buques-noivas', data.buques.noivas);
-                    renderizarSecao('lista-buques-rosas', data.buques.rosas);
                     renderizarSecao('lista-mini-buques', data.buques.mini);
                     renderizarSecao('lista-mais-vendidos', data.buques['mais-vendidos']);
                     renderizarSecao('lista-buques-variados', data.buques.variados);

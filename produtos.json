@@ -116,7 +116,7 @@
       },
       {
         "titulo": "Buquê Facínio",
-        "descricao": "Buquê com 3 hastes de lírio, mosquitinho e eucalipto.",
+        "descricao": "Buquê de lírio, mosquitinho e eucalipto.",
         "preco": 120,
         "imagens": [
           "buquê de lírio/whatsapp image 2026-09-10 at 18.21.37(1).webp",
@@ -192,50 +192,6 @@
           "floricultura files/1793731550669-e7c0fd223d.webp",
           "floricultura files/1793731550669-f03d547b79.webp",
           "floricultura files/1793731550669-894d319442.webp"
-        ]
-      }
-    ],
-    "rosas": [
-      {
-        "titulo": "Buquê de Rosas com Cervejas",
-        "descricao": "Buquê com 6 rosas importadas, 5 latinhas de cerveja, mosquitinho e avencão.",
-        "preco": null,
-        "imagens": [
-          "floricultura files/veja.webp",
-          "floricultura files/veja2.webp",
-          "floricultura files/veja3.webp"
-        ]
-      },
-      {
-        "titulo": "Buquê de Astromélias e Rosas Rosas",
-        "descricao": "Buquê com astromélias brancas, astromélias rosas, rosas cor-de-rosa e mosquitinho.",
-        "preco": 85,
-        "imagens": [
-          "floricultura files/roge.webp",
-          "floricultura files/roge1.webp",
-          "floricultura files/ult.webp",
-          "floricultura files/ult2.webp"
-        ]
-      },
-      {
-        "titulo": "Buquê de 18 Rosas Vermelhas",
-        "descricao": "Buquê com 18 rosas vermelhas importadas e aspargos.",
-        "preco": 118,
-        "imagens": [
-          "floricultura files/rosa4.webp",
-          "floricultura files/img-20260706-wa0038.webp",
-          "floricultura files/rose3.webp",
-          "floricultura files/img-20260706-wa0042.webp",
-          "floricultura files/img-20260706-wa0043.webp"
-        ]
-      },
-      {
-        "titulo": "Buquê de Girassóis com Flores do Campo",
-        "descricao": "Buquê com 6 girassóis, mosquitinho, rosas brancas, avencão, estatice roxa e 6 rosas brancas.",
-        "preco": 150,
-        "imagens": [
-          "floricultura files/pl.webp",
-          "floricultura files/pl2.webp"
         ]
       }
     ],
@@ -320,6 +276,40 @@
           "floricultura files/1793736096503-f8b05ae125.webp",
           "floricultura files/1793736096503-33e128a342.webp",
           "floricultura files/1793736096503-1f793d9013.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de Rosas, Astromélias e Gérberas",
+        "descricao": "...",
+        "preco": 70,
+        "imagens": [
+          "floricultura files/astroge3.webp",
+          "floricultura files/astroge2.webp",
+          "floricultura files/astroge1.webp",
+          "floricultura files/astroge4.webp",
+          "floricultura files/astroge5.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê gérbera e astromelia",
+        "descricao": "...",
+        "preco": 48,
+        "imagens": [
+          "floricultura files/1791313987327-22d9d00b74.webp",
+          "floricultura files/1791313987327-e8c29d64f6.webp",
+          "floricultura files/1791313987327-dbceee48ea.webp",
+          "floricultura files/1791313987327-362645d38e.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de gérbera",
+        "descricao": "Buquê de gérberas com composição personalizada.",
+        "preco": 38,
+        "imagens": [
+          "floricultura files/1791314142543-fdece52fbc.webp",
+          "floricultura files/1791314142544-2cfe0c08b0.webp",
+          "floricultura files/1791314142544-9ca81920f3.webp",
+          "floricultura files/1791314142544-0c769a18a6.webp"
         ]
       }
     ],
@@ -431,40 +421,6 @@
         ]
       },
       {
-        "titulo": "Buquê de Rosas, Astromélias e Gérberas",
-        "descricao": "...",
-        "preco": 70,
-        "imagens": [
-          "floricultura files/astroge3.webp",
-          "floricultura files/astroge2.webp",
-          "floricultura files/astroge1.webp",
-          "floricultura files/astroge4.webp",
-          "floricultura files/astroge5.webp"
-        ]
-      },
-      {
-        "titulo": "Buquê gérbera e astromelia",
-        "descricao": "...",
-        "preco": 48,
-        "imagens": [
-          "floricultura files/1791313987327-22d9d00b74.webp",
-          "floricultura files/1791313987327-e8c29d64f6.webp",
-          "floricultura files/1791313987327-dbceee48ea.webp",
-          "floricultura files/1791313987327-362645d38e.webp"
-        ]
-      },
-      {
-        "titulo": "Buquê de gérbera",
-        "descricao": "Buquê de gérberas com composição personalizada.",
-        "preco": 38,
-        "imagens": [
-          "floricultura files/1791314142543-fdece52fbc.webp",
-          "floricultura files/1791314142544-2cfe0c08b0.webp",
-          "floricultura files/1791314142544-9ca81920f3.webp",
-          "floricultura files/1791314142544-0c769a18a6.webp"
-        ]
-      },
-      {
         "titulo": "Buquê de astroméliasvariadas",
         "descricao": "Personalize sua composição!",
         "preco": 25,
@@ -496,6 +452,48 @@
           "floricultura files/1791312781093-0f79948cba.webp",
           "floricultura files/1791312781093-0c1a720d93.webp",
           "floricultura files/1791314594877-bfbbe29b9d.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de Rosas com Cervejas",
+        "descricao": "Buquê com 6 rosas importadas, 5 latinhas de cerveja, mosquitinho e avencão.",
+        "preco": null,
+        "imagens": [
+          "floricultura files/veja.webp",
+          "floricultura files/veja2.webp",
+          "floricultura files/veja3.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de Astromélias e Rosas Rosas",
+        "descricao": "Buquê com astromélias brancas, astromélias rosas, rosas cor-de-rosa e mosquitinho.",
+        "preco": 85,
+        "imagens": [
+          "floricultura files/roge.webp",
+          "floricultura files/roge1.webp",
+          "floricultura files/ult.webp",
+          "floricultura files/ult2.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de 18 Rosas Vermelhas",
+        "descricao": "Buquê com 18 rosas vermelhas importadas e aspargos.",
+        "preco": 118,
+        "imagens": [
+          "floricultura files/rosa4.webp",
+          "floricultura files/img-20260706-wa0038.webp",
+          "floricultura files/rose3.webp",
+          "floricultura files/img-20260706-wa0042.webp",
+          "floricultura files/img-20260706-wa0043.webp"
+        ]
+      },
+      {
+        "titulo": "Buquê de Girassóis com Flores do Campo",
+        "descricao": "Buquê com 6 girassóis, mosquitinho, rosas brancas, avencão, estatice roxa e 6 rosas brancas.",
+        "preco": 150,
+        "imagens": [
+          "floricultura files/pl.webp",
+          "floricultura files/pl2.webp"
         ]
       }
     ],
