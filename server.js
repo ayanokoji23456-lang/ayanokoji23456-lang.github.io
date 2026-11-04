@@ -4,6 +4,10 @@ const crypto = require('crypto');
 const fs = require('fs/promises');
 const path = require('path');
 const os = require('os');
+const sharp = require('sharp');
+const { execFile } = require('child_process');
+const { promisify } = require('util');
+const execGit = promisify(execFile);
 
 const ROOT = __dirname;
 const CATALOG_FILE = path.join(ROOT, 'produtos.json');
@@ -42,7 +46,27 @@ function requireSession(request, response, next) {
 }
 
 async function readCatalog() { return JSON.parse(await fs.readFile(CATALOG_FILE, 'utf8')); }
-async function writeCatalog(catalog) { await fs.writeFile(CATALOG_FILE, `${JSON.stringify(catalog, null, 2)}\n`, 'utf8'); }
+async function publishChanges() {
+    if (process.env.AUTO_PUBLISH === '0') return { ok: false, skipped: true, message: 'Publicação automática desativada.' };
+    try {
+        await execGit('git', ['add', 'produtos.json', 'floricultura files'], { cwd: ROOT });
+        try { await execGit('git', ['diff', '--cached', '--quiet'], { cwd: ROOT }); } catch { /* há alterações preparadas */ }
+        const staged = await execGit('git', ['diff', '--cached', '--name-only'], { cwd: ROOT });
+        if (!staged.stdout.trim()) return { ok: true, message: 'Nenhuma alteração para publicar.' };
+        try { await execGit('git', ['commit', '-m', 'Atualiza catálogo pelo painel'], { cwd: ROOT }); }
+        catch (error) { if (!/nothing to commit/i.test(error.stderr || error.stdout || '')) throw error; }
+        await execGit('git', ['push', 'origin', 'main'], { cwd: ROOT });
+        try { await execGit('git', ['push', 'githubio', 'main:main'], { cwd: ROOT }); }
+        catch (error) { return { ok: false, message: `Catálogo salvo e enviado ao repositório principal, mas o site externo recusou: ${error.stderr || error.message}` }; }
+        return { ok: true, message: 'Catálogo publicado nos dois repositórios.' };
+    } catch (error) {
+        return { ok: false, message: `Catálogo salvo, mas não pôde ser publicado: ${error.stderr || error.message}` };
+    }
+}
+async function writeCatalog(catalog) {
+    await fs.writeFile(CATALOG_FILE, `${JSON.stringify(catalog, null, 2)}\n`, 'utf8');
+    publishChanges().catch(() => {});
+}
 function getCategory(catalog, category) { return category.split('.').reduce((value, key) => value && value[key], catalog); }
 function safeFileName(originalName) {
     const extension = path.extname(originalName).toLowerCase();
@@ -127,6 +151,31 @@ app.post('/api/product', requireSession, upload.array('images'), async (request,
     response.json(catalog);
 });
 
+app.post('/api/publish', requireSession, async (request, response) => response.json(await publishChanges()));
+app.post('/api/convert-images', requireSession, async (request, response) => {
+    try {
+        const catalog = await readCatalog();
+        let converted = 0;
+        const files = await fs.readdir(UPLOAD_DIR);
+        for (const filename of files) {
+            if (!/^.*\.(jpg|jpeg|png|gif)$/i.test(filename)) continue;
+            const source = path.join(UPLOAD_DIR, filename);
+            const target = path.join(UPLOAD_DIR, filename.replace(/\.(jpg|jpeg|png|gif)$/i, '.webp'));
+            await sharp(source).rotate().webp({ quality: 82 }).toFile(target);
+            await fs.rm(source, { force: true });
+            converted++;
+        }
+        const replaceReferences = (value) => {
+            if (Array.isArray(value)) return value.map(replaceReferences);
+            if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([key, child]) => [key, replaceReferences(child)]));
+            return typeof value === 'string' ? value.replace(/\.(jpg|jpeg|png|gif)$/i, '.webp') : value;
+        };
+        await writeCatalog(replaceReferences(catalog));
+        response.json({ ok: true, converted, message: `${converted} imagem(ns) convertida(s) para WebP.` });
+    } catch (error) {
+        response.status(500).json({ ok: false, error: error.message });
+    }
+});
 app.post('/api/change-pin', requireSession, (request, response) => {
     if (request.body.current !== panelPin) return response.status(401).json({ error: 'PIN atual incorreto.' });
     if (!request.body.next || String(request.body.next).length < 4) return response.status(400).json({ error: 'O novo PIN precisa ter pelo menos 4 caracteres.' });

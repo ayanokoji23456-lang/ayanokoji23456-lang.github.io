@@ -37,6 +37,18 @@ function renderSignatureForm() { const signature = signatureData(); $('#signatur
 function showStatus(message) { $('#status-message').textContent = message; window.clearTimeout(showStatus.timer); showStatus.timer = window.setTimeout(() => { $('#status-message').textContent = ''; }, 3500); }
 function saveCatalog() { localStorage.setItem(STORAGE_KEY, JSON.stringify(catalog)); render(); showStatus('Alterações salvas neste navegador.'); }
 function imageDataUrl(file) { return new Promise((resolve, reject) => { const reader = new FileReader(); reader.onload = () => resolve(reader.result); reader.onerror = reject; reader.readAsDataURL(file); }); }
+async function convertFileToWebP(file, quality = 0.82) {
+    if (/\.webp$/i.test(file.name)) return file;
+    if (!/^image\/(jpeg|png)$/i.test(file.type)) return file;
+    const bitmap = await createImageBitmap(file);
+    const canvas = document.createElement('canvas');
+    canvas.width = bitmap.width;
+    canvas.height = bitmap.height;
+    canvas.getContext('2d').drawImage(bitmap, 0, 0);
+    const blob = await new Promise((resolve) => canvas.toBlob(resolve, 'image/webp', quality));
+    if (!blob) return file;
+    return new File([blob], file.name.replace(/\.(jpg|jpeg|png)$/i, '.webp'), { type: 'image/webp' });
+}
 
 async function loadCatalog() {
     if (BACKEND_MODE) { catalog = await fetch('/api/catalog').then((response) => { if (!response.ok) throw new Error('Não autenticado.'); return response.json(); }); return; }
@@ -159,9 +171,13 @@ async function changePin() { const current = window.prompt('Digite o PIN atual:'
 function setup() {
     $('#login-form').addEventListener('submit', async (event) => { event.preventDefault(); const pin = $('#login-pin').value; if (BACKEND_MODE) { const response = await fetch('/api/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ pin }) }); if (!response.ok) { $('#login-error').textContent = 'PIN incorreto.'; return; } } else if (pin !== (localStorage.getItem(PIN_KEY) || DEFAULT_PIN)) { $('#login-error').textContent = 'PIN incorreto.'; return; } try { $('#login-view').classList.add('is-hidden'); $('#app-view').classList.remove('is-hidden'); await loadCatalog(); render(); loadChecklist(); } catch { $('#login-view').classList.remove('is-hidden'); $('#app-view').classList.add('is-hidden'); $('#login-error').textContent = 'Não foi possível carregar o catálogo.'; } });
     $('#new-product-button').addEventListener('click', () => openEditor()); $('#new-signature-button').addEventListener('click', openNewSignature); $('#new-category-button').addEventListener('click', addCategory); $('#signature-form').addEventListener('submit', saveSignature); $('#close-dialog').addEventListener('click', closeEditor); $('#cancel-button').addEventListener('click', closeEditor); $('#product-form').addEventListener('submit', saveProduct); $('#delete-product-button').addEventListener('click', deleteProduct); $('#search-input').addEventListener('input', render); $('#preview-button').addEventListener('click', () => window.open('index.html', '_blank')); $('#change-pin-button').addEventListener('click', changePin); $('#logout-button').addEventListener('click', () => window.location.reload());
-    $('#product-images').addEventListener('change', async (event) => { const files = [...event.target.files]; if (BACKEND_MODE) { const newImages = files.map((file) => ({ file, url: URL.createObjectURL(file) })); pendingImageFiles = pendingImageFiles.concat(newImages); editingImages = editingImages.concat(newImages.map(({ url }) => url)); } else { editingImages = editingImages.concat(await Promise.all(files.map(imageDataUrl))); } renderImagePreview(); event.target.value = ''; });
+    $('#product-images').addEventListener('change', async (event) => { let files = [...event.target.files]; if (BACKEND_MODE) { files = await Promise.all(files.map(convertFileToWebP)); const newImages = files.map((file) => ({ file, url: URL.createObjectURL(file) })); pendingImageFiles = pendingImageFiles.concat(newImages); editingImages = editingImages.concat(newImages.map(({ url }) => url)); } else { editingImages = editingImages.concat(await Promise.all(files.map(async (file) => { const converted = await convertFileToWebP(file); return imageDataUrl(converted); }))); } renderImagePreview(); event.target.value = ''; });
     document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeEditor(); });
     const download = document.createElement('button'); download.className = 'button button-primary'; download.textContent = 'Baixar JSON'; download.type = 'button'; download.addEventListener('click', downloadCatalog); $('.intro-row').append(download);
     const importLabel = document.createElement('label'); importLabel.className = 'button button-quiet'; importLabel.textContent = 'Importar JSON'; const importInput = document.createElement('input'); importInput.type = 'file'; importInput.accept = '.json,application/json'; importInput.hidden = true; importInput.addEventListener('change', () => importCatalog(importInput.files[0])); importLabel.append(importInput); $('.intro-row').append(importLabel);
+    if (BACKEND_MODE) {
+        const publish = document.createElement('button'); publish.className = 'button button-primary'; publish.textContent = 'Publicar agora'; publish.type = 'button'; publish.addEventListener('click', async () => { publish.disabled = true; const response = await fetch('/api/publish', { method: 'POST' }); const result = await response.json(); publish.disabled = false; showStatus(result.message || (result.ok ? 'Publicação concluída.' : 'Falha na publicação.')); }); $('.intro-row').append(publish);
+        const convertExisting = document.createElement('button'); convertExisting.className = 'button button-quiet'; convertExisting.textContent = 'Converter imagens existentes'; convertExisting.type = 'button'; convertExisting.addEventListener('click', async () => { if (!window.confirm('Converter todas as imagens JPEG, PNG e GIF atuais para WebP?')) return; convertExisting.disabled = true; const response = await fetch('/api/convert-images', { method: 'POST' }); const result = await response.json(); convertExisting.disabled = false; await loadCatalog(); render(); showStatus(result.message || result.error || 'Conversão concluída.'); }); $('.intro-row').append(convertExisting);
+    }
 }
 setup();
