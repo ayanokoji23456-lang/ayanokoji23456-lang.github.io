@@ -55,6 +55,15 @@
     </section>
 
     <section class="categoria-carrossel">
+        <h2>Buquês de rosas</h2>
+        <div class="categoria-carrossel-viewport">
+            <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
+            <div class="categoria-carrossel-track" id="lista-buques-rosas"></div>
+            <button class="categoria-nav categoria-next" type="button" aria-label="Próximos produtos">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="categoria-carrossel">
         <h2>Mini Buquês</h2>
         <div class="categoria-carrossel-viewport">
             <button class="categoria-nav categoria-prev" type="button" aria-label="Produtos anteriores">&#10094;</button>
@@ -584,15 +593,20 @@ article.setAttribute('role', 'button');
         mudarPagina('Buques');
         document.querySelectorAll('img[src$=".webp"]').forEach(trocarExtensaoImagem);
 
-        // Usa a versão salva pelo painel quando ela existe neste navegador.
-        const catalogoSalvo = localStorage.getItem('petala_catalogo');
-        const catalogo = catalogoSalvo ? Promise.resolve(JSON.parse(catalogoSalvo)) : fetch('produtos.json').then(response => response.json());
+        // Usa sempre o catálogo atualizado publicado no site.
+        // Um catálogo antigo guardado no navegador não pode substituir os novos produtos.
+        const catalogo = fetch(`produtos.json?v=${Date.now()}`)
+            .then(response => {
+                if (!response.ok) throw new Error(`Não foi possível carregar o catálogo: ${response.status}`);
+                return response.json();
+            });
 
         catalogo
             .then(data => {
                 // Preenche as categorias correspondentes de buquês
                 if (data.buques) {
                     renderizarSecao('lista-buques-noivas', data.buques.noivas);
+                    renderizarSecao('lista-buques-rosas', data.buques.rosas);
                     renderizarSecao('lista-mini-buques', data.buques.mini);
                     renderizarSecao('lista-mais-vendidos', data.buques['mais-vendidos']);
                     renderizarSecao('lista-buques-variados', data.buques.variados);
