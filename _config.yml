@@ -1,0 +1,11 @@
+exclude:
+  - abrir-painel.bat
+  - abrir-painel.sh
+  - limpar-duplicadas.js
+  - package-lock.json
+  - package.json
+  - painel.css
+  - painel.html
+  - painel.js
+  - painel.pin
+  - server.js
