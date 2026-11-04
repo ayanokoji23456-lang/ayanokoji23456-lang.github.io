@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de produtos | Pétala</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="painel.css">
+</head>
+<body>
+    <div id="login-view" class="login-view">
+        <div class="login-card">
+            <span class="eyebrow">Pétala Floricultura</span>
+            <h1>Área de produtos</h1>
+            <p>Digite o PIN para administrar o catálogo.</p>
+            <form id="login-form">
+                <label for="login-pin">PIN de acesso</label>
+                <input id="login-pin" type="password" inputmode="numeric" autocomplete="current-password" required>
+                <button class="button button-primary" type="submit">Entrar no painel</button>
+                <small class="login-hint">PIN inicial: 1234. Altere-o depois do primeiro acesso.</small>
+                <p id="login-error" class="error-message" role="alert"></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="app-view" class="app-shell is-hidden">
+        <header class="topbar">
+            <div>
+                <span class="eyebrow">Pétala Floricultura</span>
+                <h1>Catálogo de produtos</h1>
+            </div>
+            <div class="topbar-actions">
+                <button id="preview-button" class="button button-quiet" type="button">Ver catálogo</button>
+                <button id="change-pin-button" class="button button-quiet" type="button">Alterar PIN</button>
+                <button id="logout-button" class="button button-quiet" type="button">Sair</button>
+            </div>
+        </header>
+
+        <main class="workspace">
+            <section class="intro-row">
+                <div>
+                    <p class="eyebrow">Painel de atualização</p>
+                    <h2>O que deseja atualizar hoje?</h2>
+                    <p class="muted">Cadastre, edite e organize os produtos sem mexer em código.</p>
+                </div>
+                <button id="new-product-button" class="button button-primary" type="button">+ Novo produto</button>
+            </section>
+
+            <section class="stats-row" aria-label="Resumo do catálogo">
+                <div class="stat"><strong id="product-count">0</strong><span>produtos</span></div>
+                <div class="stat"><strong id="category-count">0</strong><span>categorias</span></div>
+                <div class="stat"><strong id="image-count">0</strong><span>imagens</span></div>
+            </section>
+
+            <div id="status-message" class="status-message" role="status"></div>
+
+            <section class="signature-editor-panel">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Coleção floral</p>
+                        <h2>Apresentação da assinatura</h2>
+                        <p class="muted">Edite o texto institucional que aparece na página de assinaturas.</p>
+                    </div>
+                </div>
+                <form id="signature-form" class="signature-form">
+                    <label>Chamada curta<input id="signature-kicker" type="text" maxlength="80" required></label>
+                    <label>Título<input id="signature-title" type="text" maxlength="140" required></label>
+                    <label>Texto<textarea id="signature-text" rows="3" maxlength="500" required></textarea></label>
+                    <div class="signature-fields-row">
+                        <label>Nome da assinatura<input id="signature-name" type="text" maxlength="80" required></label>
+                        <label>Legenda<input id="signature-caption" type="text" maxlength="120" required></label>
+                    </div>
+                    <div class="signature-form-actions"><button class="button button-primary" type="submit">Salvar assinatura</button></div>
+                </form>
+                <div class="signature-products-heading">
+                    <div>
+                        <h3>Assinaturas cadastradas</h3>
+                        <p class="muted">Cadastre planos ou opções de assinatura com preço, descrição e imagens.</p>
+                    </div>
+                    <button id="new-signature-button" class="button button-primary" type="button">+ Nova assinatura</button>
+                </div>
+                <div id="signature-product-list" class="product-list"></div>
+            </section>
+
+            <section class="content-grid">
+                <div class="catalog-column">
+                    <div class="section-heading">
+                        <div>
+                            <h2>Produtos cadastrados</h2>
+                            <p class="muted">Selecione um item para editar.</p>
+                        </div>
+                        <label class="search-box" for="search-input">
+                            <span aria-hidden="true">⌕</span>
+                            <input id="search-input" type="search" placeholder="Buscar produto...">
+                        </label>
+                    </div>
+                    <div id="product-list" class="product-list"></div>
+                </div>
+
+                <aside class="checklist-panel">
+                    <div class="section-heading compact">
+                        <div>
+                            <p class="eyebrow">Antes de publicar</p>
+                            <h2>Checklist</h2>
+                        </div>
+                        <span id="checklist-progress" class="progress-label">0/5</span>
+                    </div>
+                    <div id="checklist" class="checklist">
+                        <label><input type="checkbox" data-check="name"> Nome está correto</label>
+                        <label><input type="checkbox" data-check="description"> Descrição foi revisada</label>
+                        <label><input type="checkbox" data-check="price"> Preço está atualizado</label>
+                        <label><input type="checkbox" data-check="images"> Imagem está nítida</label>
+                        <label><input type="checkbox" data-check="publish"> JSON foi baixado e publicado</label>
+                    </div>
+                    <div class="help-note">
+                        <strong>Como publicar</strong>
+                        <p>Quando o painel estiver aberto pelo servidor, salvar o produto atualiza o <b>produtos.json</b> e coloca as imagens automaticamente em <b>floricultura files</b>.</p>
+                    </div>
+                </aside>
+            </section>
+            <footer class="panel-footer">
+                <span class="panel-footer-brand">Pétala Floricultura</span>
+                <span>Flores para dizer o que importa</span>
+                <span>© 2026 · Santana de Parnaíba</span>
+            </footer>
+        </main>
+    </div>
+
+    <div id="editor-dialog" class="dialog-backdrop is-hidden">
+        <section class="editor-dialog" role="dialog" aria-modal="true" aria-labelledby="editor-title">
+            <div class="dialog-header">
+                <div><span class="eyebrow">Cadastro</span><h2 id="editor-title">Novo produto</h2></div>
+                <button id="close-dialog" class="icon-button" type="button" aria-label="Fechar">×</button>
+            </div>
+            <form id="product-form">
+                <input id="product-index" type="hidden">
+                <label>Nome do produto<input id="product-title" type="text" required maxlength="120"></label>
+                <label>Lista de produtos
+                    <div class="category-control"><select id="product-category" required></select><button id="new-category-button" class="button button-quiet" type="button">+ Nova lista</button></div>
+                </label>
+                <label>Descrição<textarea id="product-description" rows="5" required maxlength="600"></textarea></label>
+                <label>Preço (R$)<input id="product-price" type="number" min="0" step="0.01" placeholder="Ex.: 89,90"></label>
+                <label>Imagens do produto<input id="product-images" type="file" accept="image/*" multiple></label>
+                <div id="image-preview" class="image-preview"></div>
+                <p class="form-note">Imagens escolhidas são guardadas no próprio produto. Para catálogos grandes, prefira imagens WebP leves.</p>
+                <div class="dialog-actions">
+                    <button id="delete-product-button" class="button button-danger is-hidden" type="button">Excluir produto</button>
+                    <span></span>
+                    <button id="cancel-button" class="button button-quiet" type="button">Cancelar</button>
+                    <button class="button button-primary" type="submit">Salvar produto</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script src="painel.js"></script>
+</body>
+</html>
