@@ -36,6 +36,11 @@ function initCategoryCarousels() {
     });
 }
 
+// Mantém o mesmo aviso de preço também na janela de detalhes do produto.
+const detailPriceLabelStyle = document.createElement('style');
+detailPriceLabelStyle.textContent = '.produto-detalhes-preco::before { content: "A partir de: "; }';
+document.head.appendChild(detailPriceLabelStyle);
+
 initCategoryCarousels();
 
 const observer = new MutationObserver(() => initCategoryCarousels());
