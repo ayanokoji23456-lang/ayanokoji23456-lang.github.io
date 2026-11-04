@@ -25,6 +25,7 @@ app.use((request, response, next) => {
     if (['/server.js', '/painel.pin', '/package.json', '/package-lock.json'].includes(request.path)) return response.sendStatus(404);
     next();
 });
+app.get('/', (request, response) => response.redirect('/painel.html'));
 app.use(express.static(ROOT));
 
 function readCookies(request) {
