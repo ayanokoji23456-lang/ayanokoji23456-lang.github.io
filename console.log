@@ -1,5 +1,2 @@
-{"timestamp":"2026-11-10T22:20:52.462Z","level":"LOG","message":"Pétala disponível em http://localhost:3000"}
-{"timestamp":"2026-11-10T22:21:29.177Z","level":"LOG","message":"Pétala disponível em http://localhost:3000"}
-{"timestamp":"2026-11-10T22:21:39.414Z","level":"LOG","message":"Pétala disponível em http://localhost:3000"}
-{"timestamp":"2026-11-10T22:22:10.384Z","level":"ERROR","message":"Publicação não iniciada. Configure o(s) remoto(s): origin, githubio."}
-{"timestamp":"2026-11-10T22:22:10.575Z","level":"LOG","message":"Pétala disponível em http://localhost:3000"}
+{"timestamp":"2026-11-10T23:26:23.467Z","level":"LOG","message":"Pétala disponível em http://localhost:3000"}
+{"timestamp":"2026-11-10T23:26:24.682Z","level":"LOG","message":"Pétala disponível em http://localhost:3000"}
