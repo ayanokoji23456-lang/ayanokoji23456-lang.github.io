@@ -845,6 +845,12 @@
         "floricultura files/1793039432016-54a4986250.webp",
         "floricultura files/1793039432017-d4be8ce4a3.webp"
       ]
+    },
+    {
+      "titulo": "Produto Fantasma",
+      "descricao": "Vozes pairam por entre os códigos..",
+      "preco": 122.98,
+      "imagens": []
     }
   ],
   "baloes": [
@@ -1092,6 +1098,14 @@
         "floricultura files/1791916312791-30453b960c.webp",
         "floricultura files/1791916312791-a1f6b76037.webp",
         "floricultura files/1791916312791-9b9b8cd414.webp"
+      ]
+    },
+    {
+      "titulo": "Produto fnatasma",
+      "descricao": "booo!",
+      "preco": 243,
+      "imagens": [
+        "floricultura files/1794341519264-d409c16529.webp"
       ]
     }
   ],

@@ -1,0 +1,11 @@
+{"timestamp":"2026-11-07T13:53:49.865Z","level":"LOG","message":"Pétala disponível em http://localhost:3000"}
+{"timestamp":"2026-11-07T13:53:50.117Z","level":"LOG","message":"Pétala disponível em http://localhost:3000"}
+{"timestamp":"2026-11-07T13:53:51.196Z","level":"LOG","message":"Pétala disponível em http://localhost:3000"}
+{"timestamp":"2026-11-07T13:55:42.422Z","level":"ERROR","message":"Publicação não iniciada. Configure o(s) remoto(s): origin, githubio."}
+{"timestamp":"2026-11-07T13:55:53.602Z","level":"LOG","message":"Pétala disponível em http://localhost:3000"}
+{"timestamp":"2026-11-07T13:55:54.418Z","level":"LOG","message":"Pétala disponível em http://localhost:3000"}
+{"timestamp":"2026-11-08T21:08:11.331Z","level":"LOG","message":"Pétala disponível em http://localhost:3000"}
+{"timestamp":"2026-11-10T01:43:09.444Z","level":"LOG","message":"Pétala disponível em http://localhost:3000"}
+{"timestamp":"2026-11-10T08:38:35.145Z","level":"LOG","message":"Pétala disponível em http://localhost:3000"}
+{"timestamp":"2026-11-10T20:10:03.122Z","level":"LOG","message":"Pétala disponível em http://localhost:3000"}
+{"timestamp":"2026-11-10T20:11:59.273Z","level":"ERROR","message":"Publicação não iniciada. Configure o(s) remoto(s): origin, githubio."}
