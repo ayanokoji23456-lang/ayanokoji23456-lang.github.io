@@ -486,17 +486,6 @@
         ]
       },
       {
-        "titulo": "Buquê de Astromélias e Rosas Rosas",
-        "descricao": "Buquê com astromélias brancas, astromélias rosas, rosas cor-de-rosa e mosquitinho.",
-        "preco": 85,
-        "imagens": [
-          "floricultura files/roge.webp",
-          "floricultura files/roge1.webp",
-          "floricultura files/ult.webp",
-          "floricultura files/ult2.webp"
-        ]
-      },
-      {
         "titulo": "Buquê de 18 Rosas Vermelhas",
         "descricao": "Buquê com 18 rosas vermelhas importadas e aspargos.",
         "preco": 120,
@@ -511,7 +500,7 @@
       {
         "titulo": "Buquê de Girassóis com Flores do Campo",
         "descricao": "Buquê com 6 girassóis, mosquitinho, rosas brancas, avencão, estatice roxa e 6 rosas brancas.",
-        "preco": 150,
+        "preco": 180,
         "imagens": [
           "floricultura files/pl.webp",
           "floricultura files/pl2.webp"
@@ -572,8 +561,8 @@
         "descricao": "Arranjo de flores mistas com cachepô de papel.",
         "preco": 65,
         "imagens": [
-          "floricultura files/cx65.webp",
           "floricultura files/cx651.webp",
+          "floricultura files/cx65.webp",
           "floricultura files/cx652.webp",
           "floricultura files/cx653.webp",
           "floricultura files/1790268669547-4809ac6c75.webp"
