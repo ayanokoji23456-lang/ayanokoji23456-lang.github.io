@@ -3,7 +3,7 @@
     "noivas": [
       {
         "titulo": "Mini Buquê de Astromélias",
-        "descricao": "Mini buquê de mão. Buquê de astromélias, mosquitinho e finalizado com fita de cetim. (Opção para fotos e casamento no civil).",
+        "descricao": "Mini buquê de mão. Buquê de astromélias, mosquitinho e finalizado com fita de cetim. (Opção para casamento no civil).",
         "preco": 35,
         "imagens": [
           "floricultura files/1793732476995-ee030dc743.webp",
@@ -116,7 +116,7 @@
       },
       {
         "titulo": "Buquê Facínio",
-        "descricao": "Buquê de lírio, mosquitinho e eucalipto.",
+        "descricao": "Buquê com 3 hastes de lírio, mosquitinho e eucalipto.",
         "preco": 120,
         "imagens": [
           "buquê de lírio/whatsapp image 2026-09-10 at 18.21.37(1).webp",
@@ -142,7 +142,7 @@
       {
         "titulo": "Buquê Tradicional",
         "descricao": "Buquê com rosas vermelhas, ruscus, mosquitinho e aspargos.",
-        "preco": 136,
+        "preco": 130,
         "imagens": [
           "floricultura files/rosa5.webp",
           "floricultura files/rosa.webp",
@@ -154,7 +154,7 @@
       },
       {
         "titulo": "Buquê Encanto",
-        "descricao": "Buquê com lírio de São José, mosquitinho, rosas vermelhas e eucalipto.",
+        "descricao": "Buquê com 3 hastes de lírio de São José, mosquitinho, rosas vermelhas e eucalipto.",
         "preco": 150,
         "imagens": [
           "floricultura files/1793728609152-7d33406179.webp",
@@ -193,6 +193,38 @@
           "floricultura files/1793731550669-f03d547b79.webp",
           "floricultura files/1793731550669-894d319442.webp"
         ]
+      }
+    ],
+    "rosas": [
+      {
+        "titulo": "Buquê de Girassóis e Rosas Brancas",
+        "descricao": "Buquê com 3 rosas brancas, aspargos, 3 girassóis, mosquitinho e flores do campo mistas.",
+        "preco": 68,
+        "imagens": []
+      },
+      {
+        "titulo": "Buquê de 10 Rosas Vermelhas e 10 Brancas",
+        "descricao": "Buquê com 10 rosas vermelhas, 10 rosas brancas e aspargos.",
+        "preco": 130,
+        "imagens": []
+      },
+      {
+        "titulo": "Buquê de Rosas Vermelhas e Mosquitinho",
+        "descricao": "Buquê com 10 rosas vermelhas, 10 rosas brancas e mosquitinho.",
+        "preco": 140,
+        "imagens": []
+      },
+      {
+        "titulo": "Buquê de 6 Lírios de São José",
+        "descricao": "Buquê com 6 hastes de lírio de São José, eucalipto e mosquitinho.",
+        "preco": 250,
+        "imagens": []
+      },
+      {
+        "titulo": "Buquê de 48 Rosas Vermelhas",
+        "descricao": "Buquê intenso com 48 rosas vermelhas nacionais e aspargos.",
+        "preco": 580,
+        "imagens": []
       }
     ],
     "mini": [
@@ -401,7 +433,7 @@
         ]
       },
       {
-        "titulo": "Buquê de girassol e eucalipto",
+        "titulo": "Buquê de girassol",
         "descricao": "Buquê com girassol, flores do campo, mosquitinho e eucalipto.",
         "preco": 45,
         "imagens": [
@@ -421,8 +453,8 @@
         ]
       },
       {
-        "titulo": "Buquê de astroméliasvariadas",
-        "descricao": "Personalize sua composição!",
+        "titulo": "Buquê de astromélias variadas",
+        "descricao": "",
         "preco": 25,
         "imagens": [
           "astromélia/whatsapp image 2026-09-10 at 18.28.42.webp",
@@ -437,8 +469,8 @@
         ]
       },
       {
-        "titulo": "Buquê de girassóis variados",
-        "descricao": "Personalize sua composição!",
+        "titulo": "Buquês de girassóis variados",
+        "descricao": "Buquês de girassóis com composições variadas.",
         "preco": 38,
         "imagens": [
           "buquê de girasois variados/whatsapp image 2026-09-12 at 14.35.07(2).webp",
@@ -478,7 +510,7 @@
       {
         "titulo": "Buquê de 18 Rosas Vermelhas",
         "descricao": "Buquê com 18 rosas vermelhas importadas e aspargos.",
-        "preco": 118,
+        "preco": 120,
         "imagens": [
           "floricultura files/rosa4.webp",
           "floricultura files/img-20260706-wa0038.webp",
@@ -531,7 +563,7 @@
       {
         "titulo": "Buquê de Flores Felpudas",
         "descricao": "Buquê personalizável de flores felpudas e flores secas.",
-        "preco": 25,
+        "preco": 20,
         "imagens": [
           "floricultura files/psf.webp",
           "floricultura files/girof2.webp",
@@ -835,7 +867,7 @@
     },
     {
       "titulo": "Café da Manhã Completo",
-      "descricao": "Cesta contém: vaso de Kalanchoe (flores), pães variados (pão francês e pão de queijo), suco, requeijão, cappuccino, Polenguinho, requeijão, pacote de biscoito Cream Cracker Crocantíssimo, bolinho, caixa de bombons, caneca, e cappuccino solúvel.",
+      "descricao": "Cesta contém: vaso de Kalanchoe (flores), pães variados (pão francês e pão de queijo), suco, cappuccino, Polenguinho, requeijão, pacote de biscoito Cream Cracker Crocantíssimo, bolinho, caixa de bombons, caneca, e cappuccino solúvel.",
       "preco": 185,
       "imagens": [
         "floricultura files/1790011749194-eed6c58d32.webp",
@@ -903,12 +935,6 @@
         "b03.webp",
         "b04.webp"
       ]
-    },
-    {
-      "titulo": "phantom",
-      "descricao": "booo",
-      "preco": 6767,
-      "imagens": []
     }
   ],
   "plantas": [
@@ -1154,7 +1180,7 @@
       ]
     },
     {
-      "titulo": "Coleção Ambiente",
+      "titulo": "Colação Ambiente",
       "descricao": "Arranjo de porte Médio, de autoria própria com seleção de flores frescas da estação.\nMimos inclusos: Acompanha Guia de Cuidados exclusivo e sachê de conservante floral para prolongar a vida e a beleza das suas flores na água.",
       "preco": 89.9,
       "imagens": [
@@ -1163,7 +1189,7 @@
     },
     {
       "titulo": "Gestos",
-      "descricao": "Buquês delicados com flores frescas da estação e composições variadas. Mimos inclusos: Acompanha embrulho especial, além de uma foto Polaroide exclusiva do modelo entregue para guardar de lembrança.",
+      "descricao": "Buquês delicados com flores frescas da estação e composições variadas. Mimos inclusos: Acompanha embrulho especial, além de uma foto Polaroid exclusiva do modelo entregue para guardar de lembrança.",
       "preco": 89.9,
       "imagens": [
         "floricultura files/1790623973849-7093e6f987.webp"
@@ -1171,7 +1197,7 @@
     },
     {
       "titulo": "Gentil",
-      "descricao": "Buquês de porte médio e grande, exuberantes e com rica variedade de flores frescas selecionadas. Mimos inclusos: Acompanha embrulho especial, além de uma foto Polaroide exclusiva do modelo entregue para guardar de lembrança.",
+      "descricao": "Buquês de porte médio e grande, exuberantes e com rica variedade de flores frescas selecionadas. Mimos inclusos: Acompanha embrulho especial, além de uma foto Polaroid exclusiva do modelo entregue para guardar de lembrança.",
       "preco": 145,
       "imagens": [
         "floricultura files/1790624154755-0437f3c4a7.webp"
