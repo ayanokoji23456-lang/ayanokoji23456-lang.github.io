@@ -229,7 +229,7 @@
     ],
     "mini": [
       {
-        "titulo": "Buquê de girassol e mosquitnho",
+        "titulo": "Buquê de girassol e mosquitinho",
         "descricao": "...",
         "preco": 35,
         "imagens": [
@@ -313,24 +313,13 @@
       {
         "titulo": "Buquê de Rosas, Astromélias e Gérberas",
         "descricao": "...",
-        "preco": 70,
+        "preco": 110,
         "imagens": [
           "floricultura files/astroge3.webp",
           "floricultura files/astroge2.webp",
           "floricultura files/astroge1.webp",
           "floricultura files/astroge4.webp",
           "floricultura files/astroge5.webp"
-        ]
-      },
-      {
-        "titulo": "Buquê gérbera e astromelia",
-        "descricao": "...",
-        "preco": 48,
-        "imagens": [
-          "floricultura files/1791313987327-22d9d00b74.webp",
-          "floricultura files/1791313987327-e8c29d64f6.webp",
-          "floricultura files/1791313987327-dbceee48ea.webp",
-          "floricultura files/1791313987327-362645d38e.webp"
         ]
       },
       {
@@ -370,8 +359,8 @@
         "descricao": "Buquê com 3 hastes de lírio de São José e composição personalizada.",
         "preco": 140,
         "imagens": [
-          "buque de lírio/whatsapp image 2026-09-10 at 18.34.57.webp",
           "buque de lírio/whatsapp image 2026-09-10 at 18.34.58(1).webp",
+          "buque de lírio/whatsapp image 2026-09-10 at 18.34.57.webp",
           "buque de lírio/whatsapp image 2026-09-10 at 18.34.58.webp",
           "buque de lírio/whatsapp image 2026-09-10 at 18.34.59(1).webp",
           "buque de lírio/whatsapp image 2026-09-10 at 18.34.59(2).webp",
